@@ -316,7 +316,7 @@
 󷰭 ÷⹏⋅% 𝚡∧􊽨𝚢 ⟦⁅ᴍ⟦⁅./𝕊⁆⁅cid⁆⁅o𝕊⁆⟧⁆%⟧ {divide,integer divide,multiply,modulo}
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 ᴍdia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
-󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{,in thread}
+󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 ᴍeqi⟦𝕊/⟧ is{,n't} same object as
     Works same as in python
@@ -346,7 +346,7 @@
     `[1,2,3,4]󰑅󷺹>2ᐸ ≡ 3`
     `[1,2,3,4]󰑅ᔨ󷺹>2ᐸ ≡ 2` 󷹇 index
     󰤱 docs
-󷰭 󷹓󷹕󷹖󷹔 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}luding start
+󷰭 󷹓󷹕󷹖󷹔 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}cluding start
     `"abcdcba"󷹓󷺹≡␛cᐸ ≡ "abc"`
     `"abcdcba"󷹕󷺹≡␛cᐸ ≡ "ab"`
     `"abcdcba"󷹖󷺹≡␛cᐸ ≡ "dcba"`
@@ -603,19 +603,16 @@
 
 󷰾 ⟞⟝   ᴍ⟦⁅-|⁆⁅|-⁆⟧𝕊 {left,right}-tack arg for {left,right} whisker
 >   ¡ℭ ⟨DBLUE⟩ ⟞⟝
-󷰾 𝚲󰲡󰲣󰲥   ᴍ⟦⁅cZ𝕊⁆⁅wc⟦123⟧⁆⟧ λ function of form ⥌{,x,xy,xyz}↦
-󷰾  󰲧󰲩󰲫   ᴍ       wc⟦456⟧   λ function of form ⥌{xyzw,xyzwv,xyzwvu}↦
-󷰾  ⥌↦󰅂   ᴍ⟦⁅cz𝕊⁆⁅amd⁆⁅c}⁆⟧ {declare,start,close} λ function
-󷰾   ᐳᐸ   ᴍ"        ⟦AD⟧ {left,right} whisker without arg
+󷰾 𝚲󰲡󰲣󰲥󰲧󰲩󰲫   ᴍ⟦⁅cZ𝕊⁆⁅wc⟦123456⟧⁆⟧ λ function of form ⥌{,x,xy,xyz,xyzw,xyzwv,xyzwvu}↦
+󷰾 ⥌↦󰅂   ᴍ⟦⁅cz𝕊⁆⁅amd⁆⁅c}⁆⟧ {declare,start,close} λ function
+󷰾 ᐳᐸ   ᴍ"        ⟦AD⟧ {left,right} whisker without arg
 󷰾 ᑀᑅᐵᑈ   ᴍ ⟦>⁅>>⁆⟧ ⟦AD⟧ {left,right,left,right} whisker apply{,, to elt's, to elt's}, insert
 󷰾 󷺹󷺽󷺺󷺾   ᴍ|⟦>⁅>>⁆⟧ ⟦AD⟧ {left,right,left,right} whisker function{,, to elt's, to elt's}, insert
 󷰾 ᐒᐘᐖᐛ   ᴍ ⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker apply{,, to elt's, to elt's}, no insert
 󷰾 󷺻󷺿󷺼󷻀   ᴍ|⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker function{,, to elt's, to elt's}, no insert
 >   ¡ℭ ⟨YELLOW⟩ 𝚲⥌↦␛󰅁␛󰅂ᐸᐳᑅᑀᑈᐵᐘᐒᐛᐖ󷺽󷺹󷺾󷺺󷻀󷺼󷺿󷺻
 
-󷰾 𝑏𝑖𝑓𝑑   ᴍwi⟦bifd⟧ {bool,int,float,dict} type
-󷰾 ᔐ𝑦𝑒𝑜   ᴍ⟦⁅cs⁆⁅wi⟦yeo⟧⁆⟧ {str,bytes,Exception,object} type
-󷰾 𝑠𝑡𝑙   ᴍwi⟦stl⟧ {set,tuple,list} type
+󷰾 𝑏𝑖𝑓𝑑ᔐ𝑦𝑒𝑜𝑠𝑡𝑙   ᴍ⟦⁅wi⟦bifd⟧⁆⁅cs⁆⁅wi⟦yeo⟧⁆⟧ {bool,int,float,dict,str,bytes,Exception,object,set,tuple,list} type
 󷰾    ᴍcf⟦orw⟧ file {open,read,write}
 󷰾    ᴍcbc clipboard
     "()" ⟶ contents of clipboard
