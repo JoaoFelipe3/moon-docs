@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Moon";
+    src: url("font.ttf");
+}
+
+* {
+    font-family: "Moon";
+}
+
+body {
+    background: black;
+    color: white;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    position: sticky;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    background: black;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 5px solid gray;
+}
+
+@media screen and (max-width: 471px) {
+    nav {
+        height: 15vh;
+        flex-direction: column;
+    }
+}
+
+nav>h1 {
+    font-size: 5vh;
+    margin: 0;
+}
+
+nav>h1>img {
+    width: 5vh;
+    height: 5vh;
+}
+
+nav>h1>a {
+    color: white;
+    text-decoration: none;
+}
+
+nav>h1>a:hover {
+    text-decoration: underline;
+}
+
+#search-form {
+    display: flex;
+    height: 5vh;
+}
+
+#search {
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    width: 45vw;
+    height: 100%;
+    font-size: 3vh;
+    border: 2px solid gray;
+    border-radius: 1vh 0 0 1vh;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+}
+
+#submit-search {
+    padding: 0;
+    background: black;
+    color: white;
+    font-size: 4vh;
+    border: 2px solid gray;
+    border-radius: 0 1vh 1vh 0;
+    width: 5vh;
+    height: 100%;
+    margin: 0;
+    line-height: 5vh;
+    cursor: pointer;
+}
+
+#container {
+    width: 100vw;
+    height: 90vh;
+    overflow-x: scroll;
+}
+
+@media screen and (max-width: 471px) {
+    #container {
+        height: 85vh;
+    }
+}
+
+#docs {
+    margin: 0;
+    padding: 0;
+    font-size: 3vh;
+    list-style: none;
+}
+
+.show-hide {
+    float: left;
+    background: none;
+    border: none;
+    padding: 0;
+    height: 3vh;
+    font-size: 3vh;
+    color: gray;
+    cursor: pointer;
+}
+
+.show-hide:hover {
+    color: white;
+}
+
+#docs span {
+    white-space: pre;
+}
+
+.code {
+    background: #222;
+    border-radius: 1vh;
+}

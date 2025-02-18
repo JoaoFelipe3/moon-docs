@@ -1,0 +1,1 @@
+Unofficial docs page for [☾](https://github.com/GanerCodes/moon), I guess.
