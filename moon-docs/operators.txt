@@ -1,4 +1,4 @@
-󷰜 ⨳ 𝚡∨𝚡 ᴍ## Assertion
+󷰜 ⨳ 𝚡∨𝚡 ᴍ## assertion
     "𝑜 ⨳" ⟶ Asserts 𝑜 is truthy
     "𝑜₁ ⨳ 𝑜₂" ⟶ Asserts 𝑜₁ is truthy, puts 𝑜₂ in error
 󷰝 󷺤󷺦 𝚡∧𝚡 ᴍvsx⟦𝕊/⟧ {XOR,NXOR}
@@ -31,7 +31,7 @@
     `4∣8∣16 →≡ ✓`
     `4∤8∣16 →≡ ✗`
     `7∤4∤7∣14 →≡ ✓`
-󷰟 <>≥≤󰁖 𝚡∧𝚢 ⟦<>⁅⟦><⟧_⁆⟧  {less,greater,greater,less} than{,,or equal to,or equal to}
+󷰟 <>≥≤󰁖 𝚡∧𝚢 ⟦<>⁅⟦><⟧_⁆⟧  {less,greater,greater,less} than{,, or equal to, or equal to}
     `7>6>5`
     `5>4<9`
     `¬(5>4<3)`
@@ -117,7 +117,7 @@
     𝗜 󰈲􋊧 𝗙
         conditional map, apply mod to elm if right true
         `[0,1,2,3] 󰈲􍈽 󷺹>1ᐸ ≡ [0,1,󷰿,󷱀]`
-        󷹇 if modifier is not a 𝗙 it becomes a replcaement value
+        󷹇 if modifier is not a 𝗙 it becomes a replacement value
     𝗜 󰈲􋊧􌥡 𝑜
         same as previous but right func is equality check on 𝑜
     󷹇 Supports ᔨ and 󰮈
@@ -316,11 +316,11 @@
 󷰭 ÷⹏⋅% 𝚡∧􊽨𝚢 ⟦⁅ᴍ⟦⁅./𝕊⁆⁅cid⁆⁅o𝕊⁆⟧⁆%⟧ {divide,integer divide,multiply,modulo}
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 ᴍdia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
-󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{, in thread}
+󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call, loop function after delay{, in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 ᴍeqi⟦𝕊/⟧ is{,n't} same object as
     Works same as in python
-󷰭 ⫰⫯ 𝚡󷺤􊽨𝚡 ᴍa⟦+-⟧ absolute value {positive / upper,negative / lower}case
+󷰭 ⫰⫯ 𝚡󷺤􊽨𝚡 ᴍa⟦+-⟧ {,negative }absolute value / {upper,lower}case
     `󷱂⫰ ≡ 5⫰ ≡ 5`
     `󷱂⫯ ≡ 5⫯ ≡ ¯5`
     `"ABc"⫰ ≡ "ABC"`
@@ -328,17 +328,16 @@
     `"𝔸𝘛𝚖"⫯ ≡ "𝕒𝘵𝚖"`
     󷹇 modᐹ𝗙 ⇒ acts like under, i.e.
         `"xYzAWw"󷹒􊾢 ≡ "wWaZYx"`
-        [if under gets consistant support this may be changed]
+        [if under gets consistent support this may be changed]
     󷹇 supports ᔨ
+    `"abCDe"⫯ᔨ ≡ [0,1,4]`
+    `"abCDe"⫰ᔨ ≡ [2,3]`
 󷰭 󷹒 𝚡󷺤􊽨𝚡 ᴍa= negate / swap case
     `󷱂󷹒 ≡ 5`
     `5󷹒 ≡ 󷱂`
     `"aBc"󷹒 ≡ "AbC"`
     󷹇 mod∈{󷰾,0,1} ⇒ choose between ⫯󷹒⫰
     󷹇 modᐹ𝗙 under like in ⫰/⫯
-    `‹abCDe›⫯ᔨ ≡ [0,1,4]`
-    `‹abCDe›⫰ᔨ ≡ [2,3]`
-    󷹇 supports ᔨ
 󷰭 󰑅 𝚡∧􊽨𝚢 ᴍcfs first
     󷹇 Supports ᔨ
     `"abc"󰑅ᔨ␛b ≡ 1`
@@ -428,9 +427,9 @@
        `5 󰌷 󷱁 ≡ ¯54`
        `󷱁 󰌷 5 ≡ ¯45`
        `󷱀 󰌷 󷱁 ≡ 34`
-󷰭 󷸚󷸛󷸙󷸘 𝚡󷺤 𝚡 ᴍcc⟦|-/\⟧ {ℝ,î,ĵ,󷺈} part of number
+󷰭 󷸚󷸛󷸙󷸘 𝚡󷺤𝚡 ᴍcc⟦|-/\⟧ {ℝ,î,ĵ,󷺈} part of number
     `(󷸚,󷸛,󷸙,󷸘)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [1]`
-󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤 𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈,ℝ/î/ĵ/󷺈} parts of number
+󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈,ℝ/î/ĵ/󷺈} parts of number
     `(󷸜,󷸗,󷸖,󷸕)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [(1,1),(1,1,1,1)]`
 󷰭 √؆ .􊽨𝚡 ᴍ⟦⁅sq⁆⁅SQ⁆⟧ {principal,} root{,s}
     `√5  ≡ 5􊽲`
@@ -438,7 +437,7 @@
     `√󰁛5 ≡ 5󰁛􍩯`
     "؆25" ⟶ [󷱂, 5]  beware IEEE 754
     "؆³1" ⟶ 3ʳᵈ roots of unity
-󷰭 ! .𝚡 ! factorial
+󷰭 ! 𝚡. ! factorial
     Suffix unary
     `5! ≡ 120`
     `0! ≡ 1`
@@ -598,7 +597,7 @@
 󷰾 îĵ󷺈   ᴍ⟦ijk⟧^ {imaginary,j,k} unit
     `ĵ+2î ≡ ℍ(0,2,1,0)`
 󷰾 τπ󷺍󷺎󷺏   ᴍ⟦⁅t𝕊⁆⁅p⟦𝕊234⟧⁆⟧ {tau,½τ,½π,½󷺍,½󷺎}
-󷰾 􋐳􋐲􋐴􋑯   ᴍ,⟦⁅cos⁆⁅sin⁆⁅tan⁆⁅log⁆⟧ {cos,sin,tan,log} Function (maybe operator in future?)
+󷰾 􋐳􋐲􋐴􋑯􋑃􋑂   ᴍ,⟦⁅cos⁆⁅sin⁆⁅tan⁆⁅log⁆⁅lcm⁆⁅gcd⁆⟧ {cos,sin,tan,log,lcm,gcd} function (maybe operator in future?)
 >¡ℭ ⟨DBLUE⟩ □ᐦ∞îĵ󷺈ℇ󷺍󷺎󷺏
 
 󷰾 ⟞⟝   ᴍ⟦⁅-|⁆⁅|-⁆⟧𝕊 {left,right}-tack arg for {left,right} whisker
@@ -669,10 +668,10 @@
     `󰦥󰦥󰦥󰦥󰦥s𝗻␛a\bc s\{/.}tring\󰦥󰦥󰦥󰦥󰦥 ≡ "s𝗻␛a\\bc s\\{/.}tring\\"`
     Matches everything including all whitespaces until it sees another five stars.
 
-󷰾    ᴍcom Comment
+󷰾    ᴍcom comment
 >   ¡ℭ ⦑c⦑24f115|4f02⦒⦒ ""
     Ignores everything after it
-󷰾 🟑֎ JOE ᴍc⟦⁅/𝕊⁆⁅//⁆⟧ Multiline/inline comment{,}
+󷰾 🟑֎ JOE ᴍc⟦⁅/𝕊⁆⁅//⁆⟧ multiline/inline comment{,}
     `2+🟑wee🟑2 ≡ 4`
     󷹇 these autoclose at end of file
 

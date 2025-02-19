@@ -5,10 +5,27 @@ const notes = {
     "󰁘": "Calls itself when nullary",
 };
 
+const hoverComments = {
+    "󰤱": "todo",
+    "󷹇": "note",
+};
+
+const signatureComments = {
+    "∧": "left and right",
+    "⩚": "left and right, unary curries into modifier",
+    "∨": "left or right or both",
+    "󷺤": "left or right but not both",
+    "􊽨": "optional modifier",
+    "􋅂": "optional modifer, gets curried",
+    ".": "only prefix/suffix",
+    "𝚡": "value",
+    "𝚢": "value",
+};
+
 /** @type {String} */
 const styles = await(await fetch("style.json")).json();
 
-function highlightHelper(string, isCode) {
+function highlightHelper(string, isCode, isSignature) {
     const result = document.createElement("span");
 
     if (isCode) {
@@ -17,8 +34,14 @@ function highlightHelper(string, isCode) {
     };
 
     for (const char of string) {
+        const container = document.createElement("span"); // Styling :sob:
+        if (!/\s/.test(char)) container.className = "container";
         const element = document.createElement("span");
+        container.appendChild(element);
         element.innerText = char;
+
+        if (char in signatureComments && isSignature) element.title = signatureComments[char];
+        if (char in hoverComments) element.title = hoverComments[char];
 
         for (const [key, style] of Object.entries(styles)) {
             if (key.includes(char)) {
@@ -30,15 +53,15 @@ function highlightHelper(string, isCode) {
             }
         }
 
-        result.appendChild(element);
+        result.appendChild(container);
     }
 
     return result;
 }
 
-function highlight(string) {
+function highlight(string, isSignature) {
     const splitted = string.split(/(`.*?`)/);
-    const highlights = splitted.map(string => highlightHelper(string, /^`.*`$/g.test(string)));
+    const highlights = splitted.map(string => highlightHelper(string, /^`.*`$/g.test(string), isSignature));
     const span = document.createElement("span");
     span.append(...highlights);
     return span;
@@ -48,7 +71,7 @@ function highlight(string) {
 function formatFirstLine(glyphs, description) {
     return glyphs
         .map((glyph, index) => glyph + ": " + description.replaceAll(/{(.*?)}/g, (_, c) => c.split(",")[index]))
-        .join("\n  ");
+        .join("\n ");
 }
 
 let docs = await(await fetch("operators.txt")).text();
@@ -63,7 +86,7 @@ const search = new URLSearchParams(document.location.search).get("q");
 if (search) {
     document.title += " - " + search;
     const pre = document.createElement("pre");
-    pre.appendChild(highlight(search));
+    pre.appendChild(highlight(search, false));
     pre.innerHTML = "You searched for: " + pre.innerHTML
     list.insertAdjacentElement("beforebegin", pre);
 }
@@ -88,20 +111,24 @@ for (const item of docs) {
     let components = firstLine.split("\u2009");
     let glyphs = [...components[0]];
     rest ||= "";
-    if (Object.keys(notes).join("").includes(glyphs[glyphs.length - 1])) {
+    if (glyphs[glyphs.length - 1] in notes) {
         rest = "    " + notes[glyphs.pop()] + "\n" + rest;
     }
     firstLine = " " + formatFirstLine(glyphs, components[3]);
 
-    if (components[1] !== " ")
-        rest = "    Signature: `" + components[1] + "`\n" + rest;
+    let signature = components[1] !== " " ? components[1] : null;
 
-    firstLine = highlight(firstLine);
+    firstLine = highlight(firstLine, false);
     pre.appendChild(firstLine);
     li.appendChild(pre);
 
-    if (rest) {
+    if (rest || signature) {
         rest = highlight("\n" + rest);
+        rest.className = "rest";
+        if (signature) {
+            let highlightedSignature = highlight("    Signature: `" + signature + "`", true);
+            rest.prepend(highlightedSignature);
+        }
         rest.style.display = "none";
         pre.appendChild(rest);
 
@@ -109,7 +136,7 @@ for (const item of docs) {
         button.className = "show-hide";
         button.innerText = "🮦";
         button.onclick = () => {
-            rest.style.display = rest.style.display === "none" ? "inline" : "none";
+            rest.style.display = rest.style.display === "none" ? "block" : "none";
             button.innerText = button.innerText === "🮦" ? "🮧" : "🮦";
         };
         li.prepend(button);

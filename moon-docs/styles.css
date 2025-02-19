@@ -20,7 +20,7 @@ nav {
     top: 0;
     right: 0;
     background: black;
-    padding: 8px 0px;
+    padding: 0 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,29 +28,49 @@ nav {
     border-bottom: 5px solid gray;
 }
 
-@media screen and (max-width: 471px) {
+@media screen and (max-width: 598px) {
     nav {
         height: 15vh;
         flex-direction: column;
     }
+
+    #container {
+        height: 85vh;
+    }
 }
 
-nav>h1 {
+nav>ul {
+    list-style: none;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 5vh;
+}
+
+nav h1 {
     font-size: 5vh;
     margin: 0;
 }
 
-nav>h1>img {
+nav h1>img {
     width: 5vh;
     height: 5vh;
 }
 
-nav>h1>a {
+nav a {
     color: white;
     text-decoration: none;
 }
 
-nav>h1>a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
@@ -91,12 +111,7 @@ nav>h1>a:hover {
     width: 100vw;
     height: 90vh;
     overflow-x: scroll;
-}
-
-@media screen and (max-width: 471px) {
-    #container {
-        height: 85vh;
-    }
+    padding-left: 1vh;
 }
 
 #docs {
@@ -123,6 +138,20 @@ nav>h1>a:hover {
 
 #docs span {
     white-space: pre;
+}
+
+span.container {
+    width: 1ch;
+    height: 3vh;
+    display: inline-block;
+}
+
+li>pre>span {
+    display: inline-block;
+}
+
+.rest {
+    padding-left: 2ch;
 }
 
 .code {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Moon Docs</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <h2><a href="https://github.com/JoaoFelipe3/moon-docs"></a></h2>
+            </li>
+            <li>
+                <h1><img src="icon.svg" alt="Icon" /><a href="/">Moon Docs</a></h1>
+            </li>
+        </ul>
+        <form id="search-form">
+            <input id="search" name="q" placeholder="Search...">
+            <input id="submit-search" type="submit" formaction="/moon-docs/" method="GET" value="">
+        </form>
+    </nav>
+    <div id="container"> <!-- i hate these container elements -->
+        <ul id="docs">
+        </ul>
+    </div>
+    <script type="module" src="index.js"></script>
+    <noscript>
+        <style>
+            #container,
+            #search-form {
+                display: none;
+            }
+        </style>
+        <p>This site needs JavaScript enabled to run properly.</p>
+        <p>Enable it, or view the docs file directly:</p>
+        <embed src="operators.txt" />
+    </noscript>
+</body>
+
+</html>
