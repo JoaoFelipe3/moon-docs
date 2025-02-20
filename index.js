@@ -127,10 +127,10 @@ for (const item of docs) {
     li.appendChild(pre);
 
     if (rest || signature) {
-        rest = highlight("\n" + rest);
+        rest = highlight(rest);
         rest.className = "rest";
         if (signature) {
-            let highlightedSignature = highlight("    Signature: `" + signature + "`", true);
+            let highlightedSignature = highlight("    Signature: `" + signature + "`\n", true);
             rest.prepend(highlightedSignature);
         }
         rest.style.display = "none";
