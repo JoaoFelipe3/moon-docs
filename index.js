@@ -14,6 +14,7 @@ const signatureComments = {
     "∧": "left and right",
     "⩚": "left and right, unary curries into modifier",
     "∨": "left or right or both",
+    "󷸐": "left or both",
     "󷺤": "left or right but not both",
     "􊽨": "optional modifier",
     "􋅂": "optional modifer, gets curried",
