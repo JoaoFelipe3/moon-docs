@@ -17,7 +17,7 @@ const signatureComments = {
     "󷸐": "left or both",
     "󷺤": "left or right but not both",
     "􊽨": "optional modifier",
-    "􋅂": "optional modifer, gets curried",
+    "􋅂": "optional modifier, gets curried",
     ".": "only prefix/suffix",
     "𝚡": "value",
     "𝚢": "value",
