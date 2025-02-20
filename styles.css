@@ -172,7 +172,7 @@ p.tooltip::before {
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
-span.container:hover p.tooltip {
+span.container:has(span:hover) p.tooltip {
     opacity: 1;
 }
 
