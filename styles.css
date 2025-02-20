@@ -141,9 +141,39 @@ nav a:hover {
 }
 
 span.container {
+    position: relative;
     width: 1ch;
     height: 3vh;
     display: inline-block;
+}
+
+p.tooltip {
+    position: absolute;
+    margin: 0;
+    background: #111;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 150%;
+    border-radius: 1vh;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+p.tooltip::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translateX(-50%);
+    width: 1ch;
+    height: 50%;
+    background-color: inherit;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+span.container:hover p.tooltip {
+    opacity: 1;
 }
 
 li>pre>span {

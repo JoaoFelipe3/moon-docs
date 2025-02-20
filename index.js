@@ -40,8 +40,11 @@ function highlightHelper(string, isCode, isSignature) {
         container.appendChild(element);
         element.innerText = char;
 
-        if (char in signatureComments && isSignature) element.title = signatureComments[char];
-        if (char in hoverComments) element.title = hoverComments[char];
+        const tooltip = document.createElement("p");
+        tooltip.className = "tooltip";
+        if (char in hoverComments) tooltip.innerText = hoverComments[char];
+        if (char in signatureComments && isSignature) tooltip.innerText = signatureComments[char];
+        if (tooltip.innerText) container.appendChild(tooltip);
 
         for (const [key, style] of Object.entries(styles)) {
             if (key.includes(char)) {

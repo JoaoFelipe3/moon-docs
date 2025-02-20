@@ -121,7 +121,7 @@
     𝗜 󰈲􋊧􌥡 𝑜
         same as previous but right func is equality check on 𝑜
     󷹇 Supports ᔨ and 󰮈
-󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {ascending,decending}
+󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {as,des}cending
     𝗜 󰒼
         sorts data
     𝗜 󰒼 𝗙
@@ -206,7 +206,7 @@
 󷰢 󷹵󷹴󰁖 𝚡∧􊽨𝚢 ᴍcisn⟦𝕊s⟧ not instance of {right,left}
 󷰢 󱑼󷹅 𝚡∨􊽨𝚡 ᴍcc⟦zZ⟧ zip {left,right} aligned
     𝗜 󱑼 𝗜
-        zips elements at cooresponding indices
+        zips elements at corresponding indices
         `[1,2] 󱑼 [1,2,3] ≡ [[1,1],[2,2]]`
     𝗜 󱑼
         arg is iterables of iterables that will be zipped
