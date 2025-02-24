@@ -256,6 +256,8 @@
     `1⋄2 ≡ [1,2]`
     `1⋄2⋄9 ≡ [1,2,9]`
     󰤱 make this less janky
+󷰪 󷹩 𝚡∨𝚢 ᴍux exclusive difference
+    󰤱
 󷰪 ∪ 𝚡∧𝚡 ᴍuw𝕊 union
     𝑠 ∪ 𝗜 = x|𝑠(right)
     𝑙 ∪ 𝗜 = [⠤x,right∖x]
@@ -279,11 +281,32 @@
 󷰭 ☾ 𝚡󷺤􊽨𝚡 ᴍcp𝕊 print
     "‹hello›☾" ⟶ prints "hello" to stdout
     󰤱 docs
-󷰭 🃌 𝚡󷺤𝚡 ᴍca𝕊 cardinality (length)
-    𝔦 🃌
-    Returns length of 𝔦
-    `‹egg›🃌 ≡ 3`
-    `[1,2]🃌 ≡ 2`
+󷰭 🃌󷸑󷸒 𝚡󷺤􊽨𝚡 ᴍc⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆⟧ {cardinality (length),shape,depth}
+    𝗜 🃌: Length of arg
+        `‹egg›🃌 ≡ 3`
+        `[1,2]🃌 ≡ 2`
+    𝗜 󷸑: Shape of arg
+        `[[["ab","cd"],["ef","gh"]]]󷸑 ≡ 1⋄2⋄2⋄2`
+        󷹇 modifier is limit
+        `[[["ab","cd"]]]󷸑² ≡ 1⋄1`
+        `0󷸑 ≡ []`
+        `[]󷸑 ≡ [0]`
+        `[[]]󷸑 ≡ [1,0]`
+        `[1]󷸑 ≡ [1]`
+        `"joe"󷸑 ≡ [3]`
+        `["joe"]󷸑 ≡ [1,3]`
+        `["j"]󷸑 ≡ [1,1]`
+    𝗜 󷸒: Depth of arg
+        `[[["ab","cd"],["ef","gh"]]]󷸒 ≡ 4`
+        󷹇 basically same as 🃌○󷸑
+󷰭  𝚡∨􊽨𝚢 ᴍcsr reshape
+    `[1,2,3,4]₄󰄎₁ ≡ [[[1],[2],[3],[4]]]`
+    `[1,2,3,4]₁󰄎₄ ≡ [[[1,2,3,4]]]`
+    󰤱˜ docs
+󷰭 󰆩 𝚡󷺤􊽨𝚡 ᴍcsd deshape
+    `[[1,2],[3,4]]󰆩 ≡ [1,2,3,4]`
+    `[1,2,3,4]₂󰄎₁󰄎₂󰆩 ≡ [1,2,3,4]`
+    󰤱˜ docs
 󷰭 󷹝 𝚡󷺤􊽨𝚡 ᴍCS str⟷int involution
     Gets ascii/unicode value(s) of string and vise versa
     󰤱 docs
@@ -611,7 +634,7 @@
 󷰾 󷺻󷺿󷺼󷻀   ᴍ|⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker function{,, to elt's, to elt's}, no insert
 >   ¡ℭ ⟨YELLOW⟩ 𝚲⥌↦␛󰅁␛󰅂ᐸᐳᑅᑀᑈᐵᐘᐒᐛᐖ󷺽󷺹󷺾󷺺󷻀󷺼󷺿󷺻
 
-󷰾 𝑏𝑖𝑓𝑑ᔐ𝑦𝑒𝑜𝑠𝑡𝑙   ᴍ⟦⁅wi⟦bifd⟧⁆⁅cs⁆⁅wi⟦yeo⟧⁆⟧ {bool,int,float,dict,str,bytes,Exception,object,set,tuple,list} type
+󷰾 ℂℍ𝑏𝑖𝑓𝑑ᔐ𝑦𝑒𝑜𝑠𝑡𝑙   ᴍ⟦⁅⁅q⟦ch⟧⁆wi⟦bifd⟧⁆⁅cs⁆⁅wi⟦yeo⟧⁆⟧ {complex,quaternion,bool,int,float,dict,str,bytes,Exception,object,set,tuple,list} type
 󷰾    ᴍcf⟦orw⟧ file {open,read,write}
 󷰾    ᴍcbc clipboard
     "()" ⟶ contents of clipboard
