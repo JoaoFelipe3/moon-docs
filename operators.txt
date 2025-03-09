@@ -30,12 +30,12 @@
     `"hi" ≡ "ih"ᴙ`
 󷰟 󷷼󰁖 𝚡∧𝚢 ᴍdia= diamond equals
     󷹇 Requested by Michael for future advanced math things
-󷰟 ∣∤󰁖 𝚡∧𝚢 ᴍ|⟦𝕊/⟧  does{,'t} divide
+󷰟 ∣∤󰁖 𝚡∧𝚢 ᴍ|⟦𝕊/⟧  does{,n't} divide
     `4∣8 →≡ ✓`
     `4∣8∣16 →≡ ✓`
     `4∤8∣16 →≡ ✗`
     `7∤4∤7∣14 →≡ ✓`
-󷰟 <>≥≤󰁖 𝚡∧𝚢 ⟦<>⁅⟦><⟧_⁆⟧  {less,greater,greater,less} than{,,or equal to,or equal to}
+󷰟 <>≥≤󰁖 𝚡∧𝚢 ⟦<>⁅⟦><⟧_⁆⟧  {less,greater,greater,less} than{,, or equal to, or equal to}
     `7>6>5`
     `5>4<9`
     `¬(5>4<3)`
@@ -129,7 +129,7 @@
     𝗜 󰈲􋊧􌥡 𝑜
         same as previous but right func is equality check on 𝑜
     󷹇 Supports ᔨ and 󰮈
-󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {ascending,decending}
+󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {ascending,descending}
     𝗜 󰒼
         sorts data
     𝗜 󰒼 𝗙
@@ -361,7 +361,7 @@
 󷰭 ÷⹏⋅% 𝚡∧􊽨𝚢 ⟦⁅ᴍ⟦⁅./𝕊⁆⁅cid⁆⁅o𝕊⁆⟧⁆%⟧ {divide,integer divide,multiply,modulo}
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 ᴍdia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
-󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{,in thread}
+󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call, loop function after delay{, in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 ᴍeqi⟦𝕊/⟧ is{,n't} same object as
     Works same as in python
@@ -402,7 +402,7 @@
     `[1,2,3,4]󰑅󷺹>2ᐸ ≡ 3`
     `[1,2,3,4]󰑅ᔨ󷺹>2ᐸ ≡ 2` 󷹇 index
     󰤱 docs
-󷰭 󷹕󷹓󷹔󷹖 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}luding start
+󷰭 󷹕󷹓󷹔󷹖 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}cluding start
     `"abcdcba"󷹓󷺹≡␛cᐸ ≡ "abc"`
     `"abcdcba"󷹕󷺹≡␛cᐸ ≡ "ab"`
     `"abcdcba"󷹖󷺹≡␛cᐸ ≡ "dcba"`
@@ -498,7 +498,7 @@
        `󷱀 󰌷 󷱁 ≡ 34`
 󷰭 󷸚󷸛󷸙󷸘 𝚡󷺤𝚡 ᴍcc⟦|-/\⟧ {ℝ,î,ĵ,󷺈} part of number
     `(󷸚,󷸛,󷸙,󷸘)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [1]`
-󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈} parts of number
+󷰭 󷸜󷸗󷸖 𝚡󷺤𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈} parts of number
     `(󷸜,󷸗,󷸖)ᐵ∘ᑅℍ(⠤󷸺4) ⭢≡ [(1,2),(1,3),(1,4)]`
 󷰭 󷸽󷸕 𝚡󷺤 𝚡 ᴍcc⟦v*⟧ tuple of {î/ĵ/󷺈,ℝ/î/ĵ/󷺈} parts of number
     `(󷸽,󷸕)ᐵ∘ᑅℍ(1,2,3,4) ⭢≡ [(2,3,4),(1,2,3,4)]`
@@ -722,8 +722,7 @@
 
 󷰾 ⟞⟝   ᴍ⟦⁅-|⁆⁅|-⁆⟧𝕊 {left,right}-tack arg for {left,right} whisker
 >   ¡ℭ ⟨DBLUE⟩ ⟞⟝
-󷰾 𝚲󰲡󰲣󰲥   ᴍ⟦⁅cZ𝕊⁆⁅wc⟦123⟧⁆⟧ λ function of form ⥌{,x,xy,xyz}↦
-󷰾 󰲧󰲩󰲫   ᴍ       wc⟦456⟧   λ function of form ⥌{xyzw,xyzwv,xyzwvu}↦
+󷰾 𝚲󰲡󰲣󰲥󰲧󰲩󰲫   ᴍ⟦⁅cZ𝕊⁆⁅wc⟦123456⟧⁆⟧ λ function of form ⥌{,x,xy,xyz,xyzw,xyzwv,xyzwvu}↦
 󷰾 ⥌↦󰅂   ᴍ⟦⁅cz𝕊⁆⁅amd⁆⁅c}⁆⟧ {declare,start,close} λ function
 󷰾 ᐳᐸ   ᴍ"        ⟦AD⟧ {left,right} whisker without arg
 󷰾 ᑀᑅᐵᑈ   ᴍ ⟦>⁅>>⁆⟧ ⟦AD⟧ {left,right,left,right} whisker apply{,, to elt's, to elt's}, insert
@@ -731,10 +730,7 @@
 󷰾 ᐒᐘᐖᐛ   ᴍ ⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker apply{,, to elt's, to elt's}, no insert
 󷰾 󷺻󷺿󷺼󷻀   ᴍ|⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker function{,, to elt's, to elt's}, no insert
 >   ¡ℭ ⟨YELLOW⟩ 𝚲⥌↦␛󰅁␛󰅂ᐸᐳᑅᑀᑈᐵᐘᐒᐛᐖ󷺽󷺹󷺾󷺺󷻀󷺼󷺿󷺻
-󷰾 ℂℍ   ᴍq⟦ch⟧ {complex,quaternion} type
-󷰾 𝑏𝑖𝑓𝑑   ᴍwi⟦bifd⟧ {bool,int,float,dict} type
-󷰾 ᔐ𝑦𝑒𝑜   ᴍ⟦⁅cs𝕊⁆⁅wi⟦yeo⟧⁆⟧ {str,bytes,Exception,object} type
-󷰾 𝑠𝑡𝑙   ᴍwi⟦stl⟧ {set,tuple,list} type
+󷰾 ℂℍ𝑏𝑖𝑓𝑑ᔐ𝑦𝑒𝑜𝑠𝑡𝑙   ᴍ⟦⁅q⟦ch⟧⁆⁅wi⟦bifd⟧⁆⁅cs𝕊⁆⁅wi⟦yeostl⟧⁆⟧ {complex,quaternion,bool,int,float,dict,str,bytes,Exception,object,set,tuple,list} type
 󷰾    ᴍcf⟦orw⟧ file {open,read,write}
 󷰾    ᴍcbc clipboard
     "()" ⟶ contents of clipboard
@@ -791,10 +787,10 @@
     `󰦥󰦥󰦥󰦥󰦥s𝗻␛a\bc s\{/.}tring\󰦥󰦥󰦥󰦥󰦥 ≡ "s𝗻␛a\\bc s\\{/.}tring\\"`
     Matches everything including all whitespaces until it sees another five stars.
 
-󷰾    ᴍcom Comment
+󷰾    ᴍcom comment
 >   ¡ℭ ⦑c⦑24f115|4f02⦒⦒ ""
     Ignores everything after it
-󷰾 🟑֎ JOE ᴍc⟦⁅/𝕊⁆⁅//⁆⟧ Multiline/inline comment{,}
+󷰾 🟑֎ JOE ᴍc⟦⁅/𝕊⁆⁅//⁆⟧ multiline/inline comment
     `2+🟑wee🟑2 ≡ 4`
     󷹇 these autoclose at end of file
 
