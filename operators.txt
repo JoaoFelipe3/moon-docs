@@ -1,6 +1,10 @@
-󷰜 ⨳ 𝚡∨𝚡 ᴍ## assertion
+󷰜 ⨳ 𝚡∨𝚡 ᴍ## Assertion
     "𝑜 ⨳" ⟶ Asserts 𝑜 is truthy
     "𝑜₁ ⨳ 𝑜₂" ⟶ Asserts 𝑜₁ is truthy, puts 𝑜₂ in error
+    "⨳˜": Warning
+    "⨳􎒢": Deprecation warning
+    󷹇 you can make the above errors by setting the following environment variables:
+        MOON_WARNING_IS_ERR and MOON_DEPRECATION_IS_ERR
 󷰝 󷺤󷺦 𝚡∧𝚡 ᴍvsx⟦𝕊/⟧ {XOR,NXOR}
     `✓󷺤✗ →≡ ✓ ≡← ✗󷺤✓`
     `✗󷺤✗ →≡ ✗ ≡← ✓󷺤✓`
@@ -18,7 +22,7 @@
     `✓󷺒✗ →≡ ✓`
     `1∧2 →≡ 2`
     `1∧0 →≡ 0`
-󷰟 ≡≠󰁖 𝚡∧𝚡 ᴍ=⟦⁅=𝕊⁆/⟧ {,un}equal
+󷰟 ≡≠ 𝚡∧𝚡 ᴍ=⟦⁅=𝕊⁆/⟧ {,un}equal
     Works similar to python, taking certain conveniences.
     `2≡2`
     `2≠3`
@@ -26,12 +30,12 @@
     `"hi" ≡ "ih"ᴙ`
 󷰟 󷷼󰁖 𝚡∧𝚢 ᴍdia= diamond equals
     󷹇 Requested by Michael for future advanced math things
-󷰟 ∣∤󰁖 𝚡∧𝚢 ᴍ|⟦𝕊/⟧ does{,n't} divide
+󷰟 ∣∤󰁖 𝚡∧𝚢 ᴍ|⟦𝕊/⟧  does{,'t} divide
     `4∣8 →≡ ✓`
     `4∣8∣16 →≡ ✓`
     `4∤8∣16 →≡ ✗`
     `7∤4∤7∣14 →≡ ✓`
-󷰟 <>≥≤󰁖 𝚡∧𝚢 ⟦<>⁅⟦><⟧_⁆⟧  {less,greater,greater,less} than{,, or equal to, or equal to}
+󷰟 <>≥≤󰁖 𝚡∧𝚢 ⟦<>⁅⟦><⟧_⁆⟧  {less,greater,greater,less} than{,,or equal to,or equal to}
     `7>6>5`
     `5>4<9`
     `¬(5>4<3)`
@@ -95,7 +99,7 @@
         `[1,0,5] ᴮ 󷺹<0ᐸ ≡ [[1,0,5],[]]`
     󷹇 Supports 󰮈
     󰤱 make it work with ᔨ
-󷰠 ſϜ 𝚡∨􊽨𝚡 ᴍfs {fold,accumulate}
+󷰠 ſϜ 𝚡∨􊽨𝚡 ᴍ⟦⁅fs⁆⁅FS⁆⟧ {fold,accumulate}
     𝗜 ſ/Ϝ 𝗙
     Left-to-right fold.
         `[1,2,3,4] ſ + ≡ 10`
@@ -104,9 +108,13 @@
         `[] ſ⁵ + ≡ 5`
     Ϝ: same as ſ but keep intermediate values
         `[1,2,3,4] Ϝ + ≡ [1,3,6,10]`
-󷰠 ⨁⨀ 𝚡∨􊽨𝚡 ᴍo⟦+.⟧ {sum,product}
+󷰠 ⨁⨀ 𝚡󷺤􊽨𝚡 ᴍo⟦+.⟧ {sum,product}
     𝗜 ⨁/⨀
     fold over left with + or ⋅, with modifier as starting value
+    In the case of empty iterable and no default value:
+        `[] ⨁ ≡ 0`
+        `[] ⨀ ≡ 1`
+        `"" ⨁ ≡ ᐦ`
 󷰠 󰈲󰈳 𝚡∨􊽨𝚡 ᴍcf⟦+-⟧ filter {positive,negative}
     𝗜 󰈲
         filter left for truthyness
@@ -121,7 +129,7 @@
     𝗜 󰈲􋊧􌥡 𝑜
         same as previous but right func is equality check on 𝑜
     󷹇 Supports ᔨ and 󰮈
-󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {as,des}cending
+󷰠 󰒼󰒽 𝚡∨􊽨𝚡 ᴍcs⟦+-⟧ sort {ascending,decending}
     𝗜 󰒼
         sorts data
     𝗜 󰒼 𝗙
@@ -137,7 +145,7 @@
     󰤱 docs
 󷰠 ᖘ 𝚡∧􋅂𝚡 ᴍcan "candycane", apply to select
     𝗜≕𝕏 ᖘ􊽺 ꬶ
-    calls ƒ(𝕏) to get list of indices
+    calls ƒ(𝕏) to get list of indicies
     ꬶ(ƒ(𝕏)) manipulates the index list
     ᖘ will then place ꬶ(ƒ(𝕏)) into the idxs found via ƒ(𝕏)
     󰤱˜ docs
@@ -149,8 +157,7 @@
     `2 󱖔􍯏􊽮 ≡ 4`
     `󱖔􍯏􊽮 2 ≡ 4`
 󷰡 ፓ󷷴 𝚡.􊽨 ᴍdd⟦+-⟧ {,}󰤱
-󷰡 󷷳 𝚡.􊽨 ᴍdx𝕊 󰤱
-󷰡 ∫ 𝚡.􊽨 ᴍint 󰤱
+󷰡 󷷳∫ 𝚡.􊽨 ᴍ⟦⁅dx𝕊⁆⁅int⁆⟧ {,}󰤱
 󷰡 ∘ 𝚡∧􊽨𝚡 ᴍO𝕊  call left with right
     "ƒ∘x" ⟶ ƒ(x)
     "ƒ∘³x" ⟶ ƒ(x,x,x)
@@ -188,6 +195,11 @@
 󷰡 ᣆ 𝚡∨􊽨𝚢 ᴍcig conditional function application
     `1ᣆ􋄒󷹒 ≡ 󷰾 ≡ 1ᣆ􍯏󰂁⁰󷹒`
     `1ᣆ􋄓󷹒 ≡ 1 ≡ 1ᣆ􍯏󰂁¹󷹒`
+    `1ᣆ􋄓[󷺹+2] ≡ ✗`
+    `1ᣆ􍯏⁻¹[󷺹+2] ≡ 0`
+    `1ᣆ􋄒[󷺹+2] ≡ 3`
+    `1ᣆ􋄓[󷺹+2,󷺹+9] ≡ 3`
+    `1ᣆ􍯏󰂁⁰[󷺹+2,󷺹+9] ≡ 10`
     󰤱 docs
 󷰡 󷷹 𝚡∨􊽨𝚢 ᴍdiaO diamond compose
     󷹇 Requested by Michael for future advanced math things
@@ -198,7 +210,7 @@
     𝑜 ᐹ 𝑜
         Check if left is instance of right
         󷹇 if right is not a type, we get the type of it first
-        󷹇 𝗙 𝗜 𝗛 act like types
+        󷹇 𝗙 𝗜 𝗛 acts like types
         `2 ᐹ 𝑖 ≡ ✓`
         `2 ᐹ 5 ≡ ✓`
         `2 ᐹ ᔐ ≡ ✗`
@@ -206,17 +218,24 @@
 󷰢 󷹵󷹴󰁖 𝚡∧􊽨𝚢 ᴍcisn⟦𝕊s⟧ not instance of {right,left}
 󷰢 󱑼󷹅 𝚡∨􊽨𝚡 ᴍcc⟦zZ⟧ zip {left,right} aligned
     𝗜 󱑼 𝗜
-        zips elements at corresponding indices
+        zips elements at cooresponding indicies
         `[1,2] 󱑼 [1,2,3] ≡ [[1,1],[2,2]]`
     𝗜 󱑼
         arg is iterables of iterables that will be zipped
         `[[1,2,3],[5,2],[0,󷰾]] 󱑼 ≡ [[1,5,0],[2,2,󷰾]]`
     󱑼􋇜 fill with default value
         `[1,2] 󷹅⁹ [1,2,3] ≡ [[9,1],[1,2],[2,3]]`
-    
+        󷹇 if ⬤ is passed then it copies last val
+            `[1,2,3]󱑼􋅂[4,5] ≡ [[1,4],[2,5],[3,5]]`
+            `[1,2,3]󷹅􋅂[4,5] ≡ [[1,4],[2,4],[3,5]]`
+        
+    󷹇 if an arg isn't iterable, it's duplicated into
+        a list with length of longest iterable arg
+        `[5,3]󱑼2 ≡ [[5,2],[3,2]]`
+   
     󷹅: same as 󱑼 but elements are aligned towards the right
         `[1,2] 󷹅 [1,2,3] ≡ [[1,2],[2,3]]`
-󷰢 ᓕ 𝚡󷺤􋅂𝚡 ᴍcat𝕊 at indices
+󷰢 ᓕ 𝚡󷺤􋅂𝚡 ᴍcat𝕊 at indicies
     `[5,‹joe›,‹zek›]ᓕ²󰁱¹ ≡ "e"`
     `[1,2,[5,2,2,9]] ᓕ²󰁱³ ≡ 9`
     `[1,2,3,4]≕j↨ᓕ􊽧󰁱¹ ≡ j`
@@ -240,8 +259,11 @@
     󷹇 unary case has right arg equal to 1
         `1 ⪡ ≡ 2`
         `␛a␛b ⪡ ≡ ␛b␛a`
+    mod does generalize transpose
+        `[[[1,2],[3,4]],[[5,6],[7,8]],[[9,10],[11,12]]]⪢􋔛2 ≡ [[[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]]]`
+    󰤱˜ docs
 󷰧 +- 𝚡󷸏􊽨𝚢 ⟦+-⟧ {add,subtract}
-󷰧 ∓± 𝚡󷸏𝚢 ᴍ⟦⁅-+⁆⁅+-⁆⟧ {minus/plus,plus/minus}
+󷰧 ∓± 𝚡󷸏𝚢 ᴍ⟦⁅-+⁆⁅+-⁆⟧ {plus/minus,minus/plus}
     𝑜∓𝑜􊽨
     `∓5 ≡ [¯5,5]`
     `1∓5 ≡ [¯4,6]`
@@ -256,13 +278,13 @@
     `1⋄2 ≡ [1,2]`
     `1⋄2⋄9 ≡ [1,2,9]`
     󰤱 make this less janky
-󷰪 󷹩 𝚡∨𝚢 ᴍux exclusive difference
-    󰤱
-󷰪 ∪ 𝚡∧𝚡 ᴍuw𝕊 union
+󷰪 ∪ 𝚡∨𝚢 ᴍuw𝕊 union
     𝑠 ∪ 𝗜 = x|𝑠(right)
     𝑙 ∪ 𝗜 = [⠤x,right∖x]
     󰤱˜ docs
-󷰫 ∩ 𝚡∧𝚡 ᴍus𝕊 intesection
+󷰪 󷹩 𝚡∨𝚢 ᴍux exclusive difference
+    󰤱
+󷰫 ∩ 𝚡∨𝚢 ᴍus𝕊 intesection
     𝑠 ∩ 𝗜 = x∩𝑠(right)
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
     󰤱˜ docs
@@ -339,11 +361,22 @@
 󷰭 ÷⹏⋅% 𝚡∧􊽨𝚢 ⟦⁅ᴍ⟦⁅./𝕊⁆⁅cid⁆⁅o𝕊⁆⟧⁆%⟧ {divide,integer divide,multiply,modulo}
 󷰭 󷷷󷷸 𝚡∧􊽨𝚢 ᴍdia⟦*/⟧ diamond {multiply,divide}
     󷹇 Requested by Michael for future advanced math things
-󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call, loop function after delay{, in thread}
+󷰭 󰔛󱫩 𝚡∨􊽨𝚡 ᴍctm⟦𝕊s⟧ sleep or call,loop function after delay{,in thread}
     󰤱 docs
 󷰭 ≅≇󰁖 𝚡∧𝚡 ᴍeqi⟦𝕊/⟧ is{,n't} same object as
     Works same as in python
-󷰭 ⫰⫯ 𝚡󷺤􊽨𝚡 ᴍa⟦+-⟧ {,negative }absolute value / {upper,lower}case
+󷰭 󷸓󷸼󷸔 𝚡󷺤􊽨𝚡 ᴍsc⟦s𝕊w⟧ {sub,un,super}script text
+    `‹joe›󷸓󷸔≡‹􋅎􋏛􊿵›`
+    `‹joe›󷸔 ≡‹ʲᵒᵉ›`
+    `‹joe›󷸓 ≡‹ⱼ󰂼ₑ›`
+    `‹joe›󷸔²≡‹􊽿􊾼􊾸›`
+    `25󷸔≡‹²⁵›`
+    `‹ᵃ􊲞›󷸼≡‹a›`
+    `‹ᵃ􊲞›󷸼²≡‹ab›`
+    `‹ᵃ􊲞›󷸼ᔨ􋂝ᵃ􌿅􋂝ʲ≡‹ʲ􊲞›`
+    󰤱 docs
+    󷹇 supports ᔨ
+󷰭 ⫰⫯ 𝚡󷺤􊽨𝚡 ᴍa⟦+-⟧ absolute value {positive / upper,negative / lower}case
     `󷱂⫰ ≡ 5⫰ ≡ 5`
     `󷱂⫯ ≡ 5⫯ ≡ ¯5`
     `"ABc"⫰ ≡ "ABC"`
@@ -351,16 +384,17 @@
     `"𝔸𝘛𝚖"⫯ ≡ "𝕒𝘵𝚖"`
     󷹇 modᐹ𝗙 ⇒ acts like under, i.e.
         `"xYzAWw"󷹒􊾢 ≡ "wWaZYx"`
-        [if under gets consistent support this may be changed]
+        [if under gets consistant support this may be changed]
     󷹇 supports ᔨ
-    `"abCDe"⫯ᔨ ≡ [0,1,4]`
-    `"abCDe"⫰ᔨ ≡ [2,3]`
 󷰭 󷹒 𝚡󷺤􊽨𝚡 ᴍa= negate / swap case
     `󷱂󷹒 ≡ 5`
     `5󷹒 ≡ 󷱂`
     `"aBc"󷹒 ≡ "AbC"`
     󷹇 mod∈{󷰾,0,1} ⇒ choose between ⫯󷹒⫰
     󷹇 modᐹ𝗙 under like in ⫰/⫯
+    `‹abCDe›⫯ᔨ ≡ [0,1,4]`
+    `‹abCDe›⫰ᔨ ≡ [2,3]`
+    󷹇 supports ᔨ
 󷰭 󰑅 𝚡∧􊽨𝚢 ᴍcfs first
     󷹇 Supports ᔨ
     `"abc"󰑅ᔨ␛b ≡ 1`
@@ -368,14 +402,26 @@
     `[1,2,3,4]󰑅󷺹>2ᐸ ≡ 3`
     `[1,2,3,4]󰑅ᔨ󷺹>2ᐸ ≡ 2` 󷹇 index
     󰤱 docs
-󷰭 󷹓󷹕󷹖󷹔 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}cluding start
+󷰭 󷹕󷹓󷹔󷹖 𝚡∧􊽨𝚢 ᴍcf⟦ad⟧⟦𝕊/⟧ {left of and in,right of and in,left of and ex,right of and ex}luding start
     `"abcdcba"󷹓󷺹≡␛cᐸ ≡ "abc"`
     `"abcdcba"󷹕󷺹≡␛cᐸ ≡ "ab"`
     `"abcdcba"󷹖󷺹≡␛cᐸ ≡ "dcba"`
     `"abcdcba"󷹔󷺹≡␛cᐸ ≡ "cdcba"`
     󰤱˜ docs
 󷰭 󷸹󷸸󷸻󷸺 𝚡∨􊽨𝚡 ᴍcr⟦[-=]⟧ range excluding {right,both,none,left}
-    󰤱 docs
+    `1󷸻4 ≡ [1,2,3,4]`
+    `4󷸻1 ≡ [4,3,2,1]`
+    `1󷸺4 ≡ [2,3,4]`
+    `4󷸺1 ≡ [3,2,1]`
+    `1󷸹4 ≡ [1,2,3]`
+    `1󷸸4 ≡ [2,3]`
+    `1󷸻²4 ≡ [1,3]`
+    `10󷸻􍧱1 ≡ [10,8,6,4,2]`
+    `"eggs"󷸻[1,1,0,3,3]→⨝ ≡ "ggess"`
+    `[1,2,3]󷸺 ≡ 3`
+    `[1,2,3]󷸹 ≡ 1`
+    `[1,2,3]󷸻 ≡ (1,3)`
+    󰤱˜ docs
 󷰭 ⨝⟕⟖⟗ 𝚡∨􊽨𝚡 ᴍCJ⟦𝕊AD⁅J𝕊⁆⟧ join{ left, right, left and right,}
     turns into string if right arg is string
     `[1,2,3] ⨝ 𝘀 ≡ "1 2 3"`
@@ -424,7 +470,7 @@
 󷰭 ↨ 𝚡󷺤􊽨𝚡 ᴍce𝕊 enumerate (zip with index)
     Both-sides-indistinguishable unary
     𝕏↨ is identical to (𝕏⭥)󱑼𝕏
-    ↨ⁿ􋁉􋀐 works just like ⭥ except the indices are tupled with the values
+    ↨ⁿ􋁉􋀐 works just like ⭥ except the indicies are tupled with the values
     `[‹ab›,‹cd›]↨² ≡ [((0,0),'a'),((0,1),'b'),((1,0),'c'),((1,1),'d')]`
     `[‹ab›,‹cd›]↨􍧱 ≡ [[((0,0),'a'),((0,1),'b')],[((1,0),'c'),((1,1),'d')]]`
     󰤱˜ docs
@@ -439,7 +485,7 @@
     `[1,2,3,2,3,1,1,2,9]ᚤ ≡ [1,2,3,9]`
     `[2,5,0,󷰿,0,󷱂,󷰾,1,7]ᚤ󷺹²ᐸ ≡ [2,5,0,-1,7]`
     `[1,2,3,2,3,1,1,2,9]ᚤ󷺹>2ᐸ ≡ [1,3]`
-    `[1,2,3,2,3,1,1,2,9]ᚤᔨ󷺹>2ᐸ ≡ [0,2]` 󷹇 these are indices
+    `[1,2,3,2,3,1,1,2,9]ᚤᔨ󷺹>2ᐸ ≡ [0,2]` 󷹇 these are indicies
     `[1,2,3,2,3,1,1,2,9]ᚤ󷺹<3⭜󰮈⭝⟞ᐸ ≡ [3,9]`
     󷹇 Supports ᔨ and 󰮈
     󰤱˜ docs
@@ -452,19 +498,60 @@
        `󷱀 󰌷 󷱁 ≡ 34`
 󷰭 󷸚󷸛󷸙󷸘 𝚡󷺤𝚡 ᴍcc⟦|-/\⟧ {ℝ,î,ĵ,󷺈} part of number
     `(󷸚,󷸛,󷸙,󷸘)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [1]`
-󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈,ℝ/î/ĵ/󷺈} parts of number
-    `(󷸜,󷸗,󷸖,󷸕)ᐵ∘ᑅℍ(1,1,1,1)→ᚤ ≡ [(1,1),(1,1,1,1)]`
+󷰭 󷸜󷸗󷸖󷸕 𝚡󷺤𝚡 ᴍcc⟦+<>*⟧ tuple of {ℝ/î,ℝ/ĵ,ℝ/󷺈} parts of number
+    `(󷸜,󷸗,󷸖)ᐵ∘ᑅℍ(⠤󷸺4) ⭢≡ [(1,2),(1,3),(1,4)]`
+󷰭 󷸽󷸕 𝚡󷺤 𝚡 ᴍcc⟦v*⟧ tuple of {î/ĵ/󷺈,ℝ/î/ĵ/󷺈} parts of number
+    `(󷸽,󷸕)ᐵ∘ᑅℍ(1,2,3,4) ⭢≡ [(2,3,4),(1,2,3,4)]`
 󷰭 √؆ .􊽨𝚡 ᴍ⟦⁅sq⁆⁅SQ⁆⟧ {principal,} root{,s}
     `√5  ≡ 5􊽲`
     `√³5 ≡ 5􋀞`
     `√󰁛5 ≡ 5󰁛􍩯`
     "؆25" ⟶ [󷱂, 5]  beware IEEE 754
     "؆³1" ⟶ 3ʳᵈ roots of unity
-󷰭 ! 𝚡. ! factorial
-    Suffix unary
-    `5! ≡ 120`
-    `0! ≡ 1`
-    󰤱 generalize to gamma function
+󷰭 󰤷⦡ 𝚡∨􊽨𝚡 ᴍCC⟦AP⟧ {angle/phase,polar/rectangular conversions}
+    Let 𝖼∈ℂ
+    𝖼󰤷 ≡ 𝖼󷸜󰤷 ≡ 𝖼󷸛󰤷󷸚𝖼 ≡ atan2(𝖼󷸚,𝖼󷸛)
+    𝖼⦡ ≡ (𝖼⫰,󰤷𝖼)
+    𝖼 ≡ (𝖼⫰,󰤷𝖼)⦡ ≡ 𝖼⫰⦡(󰤷𝖼) ≡ 𝖼⫰⦡􍽰󰤷􋐎ˢᵘᵖ
+    󰤱 make 󰤷 take angles between arb. vectors
+    󰤱 tests
+󷰭 ✿ 𝚡∧􊽨𝚢 ᴍflower quadratic reciprocity
+    Let a,p∈ℤ
+    a✿p ≡ Kronecker symbol (a/p)
+    a✿p∈[󷰾,0,1]
+    https://en.wikipedia.org/wiki/Kronecker_symbol
+    p∈¶ ⇒ a✿p ≡ p∣a ⭜0⭝ ∃x✣p∣x²-a ⭜1⭝ 󷰾
+    `1✿3 ≡ 1`
+    `󷰾✿3 ≡ 󷰾`
+    `12✿3 ≡ 0`
+    `󷱂✿󷱃 ≡ 1`
+󷰭 ⫚ 𝚡∧􊽨𝚢 ᴍnCr choose
+    Let n∈ℂ, k∈ℕ
+    n⫚k ≡ binomial of n,k ≡ n(n-1)…(n-k+1)/k!
+    Let n∈ℂ, k⊂ℕ, e.g., k=[2,3,5]
+    n⫚k ≡ multinomial of n,⠤k
+    Let Xᐹ𝗜, k∈ℕ
+    X⫚k ≡ list of lists with k elements from X
+    Let Xᐹ𝗜, k⊂ℕ, e.g., k=[2,3,5]
+    X⫚k ≡ list of ways to choose k₀ elts, then k₁ elts, etc. as list of list of list
+    `⫚(5 ,2    ) ≡5!⹏(2!⋅←    (5-2  )!)≡10`
+    `⫚(7 ,[2,3]) ≡7!⹏(2!⋅←3!⋅←(7-2-3)!)≡210`
+    `⫚(5⭥,2    ) ≡[[0,1],[0,2],[1,2],[0,3],[1,3],[2,3],[0,4],[1,4],[2,4],[3,4]]`
+    `⫚(7⭥,[2,3])🃌≡210`
+    `⫚(4⭥,[1,2]) ≡[[[2],[0,1]],[[1],[0,2]],[[0],[1,2]],[[3],[0,1]],[[3],[0,2]],[[3],[1,2]],[[1],[0,3]],[[0],[1,3]],[[2],[0,3]],[[2],[1,3]],[[0],[2,3]],[[1],[2,3]]]`
+󷰭 ¶ 𝚡∨􊽨𝚡 ᴍpil primes
+    󰤱 docs
+    `55∉¶∋951572288761891`
+    `4¶ ≡ [2,3,5,7]`
+    `6¶󰂂 ≡ [2,3,5]`
+    `7³⋅5⋅2 ¶⁷ ≡ 3`
+    `10 ¶⁺ ≡ [1,2,5,10]`
+    `2²⋅5 ¶􋁒 ≡ [2,5]`
+    `2²⋅5 ¶ ≡ [2,2,5]`
+    `2²⋅5 ¶􋁼 ≡ ℵ⁰({2:2, 5:1})`
+    `2²⋅5 ¶􋄴 ≡ ℵ⁰({2:[2,2], 5:[5]})`
+    `3³ ¶􊽥 ≡ 󷰾`  idk what this does lol
+     ¶􀰫 󰤱
 󷰭 ⴵ 𝚡󷺤𝚡 ᴍcsn sign of number / case
     `󷰿ⴵ   ≡ 󷰾`
     `0ⴵ   ≡ 0`
@@ -489,7 +576,7 @@
         `‹x y›⍭ ≡ [␛x,␛y]`
         `‹ y›⍭  ≡ [ᐦ,␛y]`
         `‹y›⍭   ≡ [␛y]`
-    󷹇 this makes use of two alternative space characters unless special highlighting is applied this is confusing
+    󷹇 this makes use of two alternative space characters unless spcial highlighting is applied this is confusing
 󷰭 󷹗 𝚡󷺤􊽨𝚡 ᴍasw ugex push
     𝑜 󷹗: Pushes 𝑜 onto ugex stack
     𝑜 󷹗ⁿ: Pushes n copies of 𝑜 onto ugex stack
@@ -502,7 +589,14 @@
     Opposite of bool value of
 󷰮 ¯ .𝚡 ᴍ_𝕊 negate
     `¯5 ≡ 󷱂`
-󷰯 … 𝚡∧𝚢 ᴍ..𝕊 indices between
+󷰷 ! 𝚡. ! factorial
+    Suffix unary
+    `5! ≡ 120`
+    `0! ≡ 1`
+    `3!5! ≡ 720`
+    󰤱 micheal
+    󰤱 generalize to gamma function
+󷰯 … 𝚡∧𝚢 ᴍ..𝕊 indicies between
     Same as 󷸹
 󷰯 ⌃󰁌 𝚡∧􊽨𝚢 ᴍc^ exponential
     `5⌃2 ≡ 5² ≡ 25`
@@ -523,7 +617,7 @@
     󰤱˜ docs
 󷰱 ® 􋅂 ᴍor roots of unity
     "®² ≡ ®(2)" ⟶ ∓1  beware IEEE 754
-󷰱 󰻾 􊽨 ᴍid𝕊 identity
+󷰱 󰻾 􊽨 ᴍid𝕊 identify
     󰻾􋇜
         function that always returns the modifier value
         `󰻾⁵(22) ≡ 5`
@@ -569,7 +663,7 @@
     `✗⭜5 ➡≡ □`
     `✓⭜5 ➡≡ 5`
     `✗ ⭜5⭝ ✓ ⭜9⭝ 0 ➡≡ 9`
->¡ℭ ⟨LBLEEN⟩ 󱀘⨡⮂↪⮌↺⇥➰∀=¿⸘␛¡⭜⭝⠤⠶󰆴
+>¡ℭ ⟨LBLEEN⟩ =⊢󱀘⨡↪󰆴⮂⮌↺⇥∀➰⠤⠶¿⸘␛¡⭜⭝
 
 0 ⬅➡   ᴍa⟦⁅AA⁆⁅DD⁆⟧ push right into {left,right} (Strongest)
 0 ←→   ᴍa⟦ad⟧𝕊 push {right,left} into {left,right} (Medium)
@@ -606,13 +700,15 @@
     `✓≡1`
 󷰾 ⴴⴳ   ᴍcc⟦ft⟧ {falsey,truthy} function that always returns {false,true}
 >¡ℭ ⦑c⦑f00⦒⦒ ✗ⴴ ␠ ¡ℭ ⦑c⦑0f0⦒⦒ ✓ⴳ
-󷰾 𝗙   ᴍwsF check if function
+󷰾 𝗙𝗛𝗜   ᴍws⟦FHI⟧ check if {function,hashable,iterable}
     `󷺹²ᐸᐹ𝗙 ∧ 𝗙(󷺹²) ≡ ✓`
     `[1,2,3]ᐹ𝗙 ∨ 𝗙(22) ≡ ✗`
-󷰾 𝗛   ᴍwsH check if hashable, if so, return hashed value
-󷰾 𝗜   ᴍwsI check if iterable
+    
     `[1,2,3]ᐹ𝗜 ∧ 𝗜([1,2,3]) ≡ ✓`
     `2ᐹ𝗜 ∨ 𝗜(□) ≡ ✗`
+    
+    󷹇 𝗛 checks if hashable, if so, return hashed value
+
 󷰾 □   ᴍ[] none
 󷰾 ᐦ   ᴍc" empty string
 󷰾 ∞   ᴍ88 infinity
@@ -620,12 +716,14 @@
 󷰾 îĵ󷺈   ᴍ⟦ijk⟧^ {imaginary,j,k} unit
     `ĵ+2î ≡ ℍ(0,2,1,0)`
 󷰾 τπ󷺍󷺎󷺏   ᴍ⟦⁅t𝕊⁆⁅p⟦𝕊234⟧⁆⟧ {tau,½τ,½π,½󷺍,½󷺎}
-󷰾 􋐳􋐲􋐴􋑯􋑃􋑂   ᴍ,⟦⁅cos⁆⁅sin⁆⁅tan⁆⁅log⁆⁅lcm⁆⁅gcd⁆⟧ {cos,sin,tan,log,lcm,gcd} function (maybe operator in future?)
+󷰾 􋐳􋐲􋐴􋑯   ᴍ,⟦⁅cos⁆⁅sin⁆⁅tan⁆⁅log⁆⟧ {cos,sin,tan,log} Function (maybe operator in future?)
+󷰾 􋑃􋑂   ᴍ,⟦⁅lcm⁆⁅gcd⁆⟧ {lcm,gcd} Function (maybe operator in future?)
 >¡ℭ ⟨DBLUE⟩ □ᐦ∞îĵ󷺈ℇ󷺍󷺎󷺏
 
 󷰾 ⟞⟝   ᴍ⟦⁅-|⁆⁅|-⁆⟧𝕊 {left,right}-tack arg for {left,right} whisker
 >   ¡ℭ ⟨DBLUE⟩ ⟞⟝
-󷰾 𝚲󰲡󰲣󰲥󰲧󰲩󰲫   ᴍ⟦⁅cZ𝕊⁆⁅wc⟦123456⟧⁆⟧ λ function of form ⥌{,x,xy,xyz,xyzw,xyzwv,xyzwvu}↦
+󷰾 𝚲󰲡󰲣󰲥   ᴍ⟦⁅cZ𝕊⁆⁅wc⟦123⟧⁆⟧ λ function of form ⥌{,x,xy,xyz}↦
+󷰾 󰲧󰲩󰲫   ᴍ       wc⟦456⟧   λ function of form ⥌{xyzw,xyzwv,xyzwvu}↦
 󷰾 ⥌↦󰅂   ᴍ⟦⁅cz𝕊⁆⁅amd⁆⁅c}⁆⟧ {declare,start,close} λ function
 󷰾 ᐳᐸ   ᴍ"        ⟦AD⟧ {left,right} whisker without arg
 󷰾 ᑀᑅᐵᑈ   ᴍ ⟦>⁅>>⁆⟧ ⟦AD⟧ {left,right,left,right} whisker apply{,, to elt's, to elt's}, insert
@@ -633,8 +731,10 @@
 󷰾 ᐒᐘᐖᐛ   ᴍ ⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker apply{,, to elt's, to elt's}, no insert
 󷰾 󷺻󷺿󷺼󷻀   ᴍ|⟦>⁅>>⁆⟧|⟦AD⟧ {left,right,left,right} whisker function{,, to elt's, to elt's}, no insert
 >   ¡ℭ ⟨YELLOW⟩ 𝚲⥌↦␛󰅁␛󰅂ᐸᐳᑅᑀᑈᐵᐘᐒᐛᐖ󷺽󷺹󷺾󷺺󷻀󷺼󷺿󷺻
-
-󷰾 ℂℍ𝑏𝑖𝑓𝑑ᔐ𝑦𝑒𝑜𝑠𝑡𝑙   ᴍ⟦⁅⁅q⟦ch⟧⁆wi⟦bifd⟧⁆⁅cs⁆⁅wi⟦yeo⟧⁆⟧ {complex,quaternion,bool,int,float,dict,str,bytes,Exception,object,set,tuple,list} type
+󷰾 ℂℍ   ᴍq⟦ch⟧ {complex,quaternion} type
+󷰾 𝑏𝑖𝑓𝑑   ᴍwi⟦bifd⟧ {bool,int,float,dict} type
+󷰾 ᔐ𝑦𝑒𝑜   ᴍ⟦⁅cs𝕊⁆⁅wi⟦yeo⟧⁆⟧ {str,bytes,Exception,object} type
+󷰾 𝑠𝑡𝑙   ᴍwi⟦stl⟧ {set,tuple,list} type
 󷰾    ᴍcf⟦orw⟧ file {open,read,write}
 󷰾    ᴍcbc clipboard
     "()" ⟶ contents of clipboard
@@ -691,10 +791,10 @@
     `󰦥󰦥󰦥󰦥󰦥s𝗻␛a\bc s\{/.}tring\󰦥󰦥󰦥󰦥󰦥 ≡ "s𝗻␛a\\bc s\\{/.}tring\\"`
     Matches everything including all whitespaces until it sees another five stars.
 
-󷰾    ᴍcom comment
+󷰾    ᴍcom Comment
 >   ¡ℭ ⦑c⦑24f115|4f02⦒⦒ ""
     Ignores everything after it
-󷰾 🟑֎ JOE ᴍc⟦⁅/𝕊⁆⁅//⁆⟧ multiline/inline comment{,}
+󷰾 🟑֎ JOE ᴍc⟦⁅/𝕊⁆⁅//⁆⟧ Multiline/inline comment{,}
     `2+🟑wee🟑2 ≡ 4`
     󷹇 these autoclose at end of file
 
