@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.svg">
     <link rel="stylesheet" href="styles.css">
-    <title>Moon Docs</title>
+    <title>Moon Docs - Golf Explainer</title>
 </head>
 
 <body>
@@ -22,16 +22,24 @@
                 <h1><img src="icon.svg" alt="Icon" /><a href="/">Moon Docs</a></h1>
             </li>
         </ul>
-        <form id="search-form">
-            <input id="search" name="q" placeholder="Search...">
-            <input id="submit-search" type="submit" formaction="/" method="GET" value="">
-        </form>
     </nav>
-    <div id="container"> <!-- i hate these container elements -->
-        <ul id="docs">
-        </ul>
+
+    <div id="container">
+        <p>Type in your golfed code in the input box below. It will be highlighted.</p>
+        <div id="input-container">
+            <!-- Fun fact: this is the approach I suggested for the Uiua pad to make it less buggy -->
+            <textarea id="golf-input"></textarea>
+            <div id="golf-overlay"></div>
+        </div>
+        <div id="explanation" style="display: none">
+            <p>Since the code you input is a one-liner, we'll let you write an explanation.</p>
+            <ul id="explanation-content">
+                <div id="palette"></div>
+            </ul>
+        </div>
     </div>
-    <script type="module" src="index.js"></script>
+
+    <script type="module" src="golf.js"></script>
     <noscript>
         <style>
             #container,

@@ -108,6 +108,7 @@ nav a:hover {
 }
 
 #container {
+    position: relative;
     width: 100vw;
     height: 90vh;
     overflow-x: scroll;
@@ -187,4 +188,63 @@ li>pre>span {
 .code {
     background: #222;
     border-radius: 1vh;
+}
+
+
+/* golf.html*/
+
+#input-container {
+    display: inline-block;
+    width: calc(100% - 1vh);
+    position: relative;
+    resize: both;
+    font-size: 3vh;
+}
+
+#golf-input {
+    width: 100%;
+    height: 30vh;
+    font-size: inherit;
+    text-wrap: nowrap;
+}
+
+#golf-overlay {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    background: #111;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: scroll;
+    text-wrap: nowrap;
+}
+
+#explanation-content {
+    font-size: 3vh;
+    padding-left: 0;
+}
+
+#palette {
+    margin: 0;
+    padding-left: 4ch;
+}
+
+#palette span:not(:has(span)):hover {
+    text-decoration: underline;
+}
+
+#explanation-content pre {
+    margin: 0;
+}
+
+.comment-input {
+    display: inline;
+    background: none;
+    border: none;
+    height: 3vh;
+    font-size: 3vh;
+    field-sizing: content;
+    color: #24f115;
 }
