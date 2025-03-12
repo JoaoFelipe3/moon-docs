@@ -32,7 +32,7 @@ function createExplanationLine(a, b) {
     downButton.className = "show-hide";
     downButton.innerText = "󷹘";
     downButton.addEventListener("click", () => {
-        if (newLine.matches(":not(:first-child)"))
+        if (newLine.matches(":not(:last-child)"))
             newLine.parentElement.insertBefore(newLine.nextElementSibling, newLine);
     });
 
