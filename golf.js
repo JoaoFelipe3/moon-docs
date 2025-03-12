@@ -25,7 +25,7 @@ function createExplanationLine(a, b) {
     upButton.className = "show-hide";
     upButton.innerText = "󷹗";
     upButton.addEventListener("click", () => {
-        if (newLine.matches(":not(:first-child)"))
+        if (newLine.matches(":not(:nth-child(2))"))
             newLine.parentElement.insertBefore(newLine, newLine.previousElementSibling);
     });
     const downButton = document.createElement("span");
