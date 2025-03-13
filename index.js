@@ -2,7 +2,6 @@ import highlight from "/highlight.js";
 
 const notes = {
     "󰁖": "Comparison function, i.e. `a●b●c` ⟶ `a●b∧b●c`",
-    "󰁢": "Capital letter modifiers work differently",
     "󰁌": "Right-associative",
     "󰁘": "Calls itself when nullary",
 };
@@ -52,7 +51,8 @@ for (const item of docs) {
     let glyphs = [...components[0]];
     rest ||= "";
     if (glyphs[glyphs.length - 1] in notes) {
-        let note = notes[glyphs.pop()];
+        const note = notes[glyphs.pop()];
+        console.log(note);
         rest = "    " + note + "\n" + rest;
     }
     firstLine = " " + formatFirstLine(glyphs, components[3]);
@@ -67,7 +67,7 @@ for (const item of docs) {
         rest = highlight(rest, { displayNotes: true, hasCode: true });
         rest.className = "rest";
         if (signature) {
-            let highlightedSignature = highlight("    Signature: `" + signature + "`\n", { isSignature: true });
+            let highlightedSignature = highlight("    Signature: `" + signature + "`\n", { hasCode: true, isSignature: true });
             rest.prepend(highlightedSignature);
         }
         rest.style.display = "none";

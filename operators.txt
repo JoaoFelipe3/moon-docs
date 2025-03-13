@@ -1,4 +1,4 @@
-󷰜 ⨳ 𝚡∨𝚡 ᴍ## Assertion
+󷰜 ⨳ 𝚡∨𝚡 ᴍ## assertion
     "𝑜 ⨳" ⟶ Asserts 𝑜 is truthy
     "𝑜₁ ⨳ 𝑜₂" ⟶ Asserts 𝑜₁ is truthy, puts 𝑜₂ in error
     "⨳˜": Warning
@@ -57,7 +57,7 @@
     `[1] 󷹲 [1,2] →≡ ✗`
     `[1,2] ⊊ [1,2] →≡ ✗`
     `[1,2] 󷹲 [1,2] →≡ ✓`
-󷰠 ᴍ󰁢 𝚡∧􊽨𝚢 ᴍcm𝕊 map
+󷰠 ᴍ 𝚡∧􊽨𝚢 ᴍcm𝕊 map
     𝗜 ᴍ 𝗙
         Maps an iterable with a function
         `[‹hi›, ‹there›] ᴍ 🃌 ≡ [2, 5]`
@@ -68,15 +68,15 @@
         n<0: Kinda weird, but generally backwards from ∞
             `["hi", [[["egg"]]]] ᴍ􍧱 🃌 ≡ [2, [[[3]]]]`
             󷹇 󷰾 would map the characters in those strings
-    ᴍᴷ,ᴍⱽ,ᴍᴰ
+    ᴍ⁻,ᴍ⁺,ᴍ
         Similar to above, but a dict:dict mapping
-        K: keys  , Modify keys only
-        V: values, Modify values only
-        D: dict  , Both keys and values
+        +: keys  , Modify keys only
+        -: values, Modify values only
+        *: dict  , Both keys and values
         󷹇 the function still expects one value which will be the [key, value] list
         󷹇 use ꟿ for a function with two args
     󷹇 Supports 󰮈
-󷰠 ꟿ󰁢 𝚡∧􊽨𝚢 ᴍcsm starmap
+󷰠 ꟿ 𝚡∧􊽨𝚢 ᴍcsm starmap
     𝗜 ꟿ 𝗙
     Map but instead of calling the function directly it unpacks the arg
     `[[1,2],[3,4]] ꟿ + ≡ [3,7]`
@@ -86,17 +86,17 @@
     Same as ᴍ but uses multiple threads.
     The number of threads defaults to the number of CPU threads.
     󰤱 make this have proper multithreading
-󷰠 󰁢 𝚡∨􊽨𝚡 ᴍcg𝕊 group-by
+󷰠  𝚡∨􊽨𝚡 ᴍcg𝕊 group-by
     𝗜 
         group into dictionary with keys by truthyness
         `[1,5,3,2]  󷺹%3ᐸ ≡ {0:[3],1:[1],2:[5,2]}`
     𝗜  𝗙
         group into dictionary with keys defined by right arg
-    󰀒: return list of values, dropping keys
-    ᴮ: like 󰀒, except groups are only false/true (& are included), so
-        `[1,0,5] ᴮ ≡ [[0],[1,5]]`
-        `[1,0,5] ᴮ 󷺹>1ᐸ ≡ [[1,0],[5]]`
-        `[1,0,5] ᴮ 󷺹<0ᐸ ≡ [[1,0,5],[]]`
+    ⁺: return list of values, dropping keys
+    􋇐: like ⁺, except groups are only false/true (& are included), so
+        `[1,0,5] 􋇐 ≡ [[0],[1,5]]`
+        `[1,0,5] 􋇐 󷺹>1ᐸ ≡ [[1,0],[5]]`
+        `[1,0,5] 􋇐 󷺹<0ᐸ ≡ [[1,0,5],[]]`
     󷹇 Supports 󰮈
     󰤱 make it work with ᔨ
 󷰠 ſϜ 𝚡∨􊽨𝚡 ᴍ⟦⁅fs⁆⁅FS⁆⟧ {fold,accumulate}
@@ -284,7 +284,7 @@
     󰤱˜ docs
 󷰪 󷹩 𝚡∨𝚢 ᴍux exclusive difference
     󰤱
-󷰫 ∩ 𝚡∨𝚢 ᴍus𝕊 intesection
+󷰫 ∩ 𝚡∨𝚢 ᴍus𝕊 intersection
     𝑠 ∩ 𝗜 = x∩𝑠(right)
     𝗜 ∩ 𝗜 = left󰈲󷺹∈right
     󰤱˜ docs
@@ -332,7 +332,8 @@
 󷰭 󷹝 𝚡󷺤􊽨𝚡 ᴍCS str⟷int involution
     Gets ascii/unicode value(s) of string and vise versa
     󰤱 docs
-󷰭 󷹜 𝚡∨􊽨𝚡 ᴍCI str to int / change base
+󷰭 󷹜 𝚡󷺤􊽨𝚡 ᴍCI str to int / change base
+    󷹇 mod is (target_base)+(zero_padding)î
     󰤱 docs
 󷰭 󰛔 𝚡∨􋅂𝚡 ᴍcma string replacement
     "find 󰛔ᵗᵃʳᵍᵉᵗ replace" or "(find 󰛔 replace)(target)"
