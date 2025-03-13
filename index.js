@@ -74,7 +74,7 @@ for (const item of docs) {
         pre.appendChild(rest);
 
         const button = document.createElement("button");
-        button.className = "show-hide";
+        button.className = "button";
         button.innerText = "🮦";
         button.onclick = () => {
             rest.style.display = rest.style.display === "none" ? "block" : "none";

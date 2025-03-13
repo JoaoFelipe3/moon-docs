@@ -25,12 +25,25 @@
     </nav>
 
     <div id="container">
+        <p id="info">
+            <span id="info-button" class="button"></span>
+            <span id="info-text" style="display: none;">
+                First, I'm sorry for there being no cursor/selection for now, I'm really lazy XD
+                To use the explanation menu, you click the characters on the top line.
+                It isn't evident, but clicking on two of them adds a range to your explanation.
+                From there, you can click the buttons to move it up/down or delete it, and the comment
+                also automatically gets focused.
+                Also, you can use the golf input to measure how long your code is, and to just highlight it.
+            </span>
+        </p>
         <p>Type in your golfed code in the input box below. It will be highlighted.</p>
         <div id="input-container">
             <!-- Fun fact: this is the approach I suggested for the Uiua pad to make it less buggy -->
             <textarea id="golf-input"></textarea>
             <div id="golf-overlay"></div>
         </div>
+        <p>Your code is <span id="char-counter">0</span> characters long and <span id="byte-counter">0</span> UTF-8
+            bytes long.</p>
         <div id="explanation" style="display: none">
             <p>Since the code you input is a one-liner, we'll let you write an explanation.</p>
             <ul id="explanation-content">
@@ -42,8 +55,7 @@
     <script type="module" src="golf.js"></script>
     <noscript>
         <style>
-            #container,
-            #search-form {
+            #container {
                 display: none;
             }
         </style>

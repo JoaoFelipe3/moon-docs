@@ -122,7 +122,7 @@ nav a:hover {
     list-style: none;
 }
 
-.show-hide {
+.button {
     float: left;
     background: none;
     border: none;
@@ -133,7 +133,8 @@ nav a:hover {
     cursor: pointer;
 }
 
-.show-hide:hover {
+.button:hover,
+.button:focus {
     color: white;
 }
 
@@ -243,8 +244,46 @@ li>pre>span {
     display: inline;
     background: none;
     border: none;
+    min-width: 1ch;
     height: 3vh;
     font-size: 3vh;
     field-sizing: content;
     color: #24f115;
+}
+
+.comment-input:hover {
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+
+.delete-button {
+    float: left;
+    background: none;
+    border: none;
+    padding: 0;
+    height: 3vh;
+    font-size: 3vh;
+    color: gray;
+    cursor: pointer;
+}
+
+.delete-button:hover,
+.delete-button:focus {
+    color: red;
+}
+
+#info {
+    min-height: 1rem;
+}
+
+#info-button {
+    margin: 0;
+    font-size: unset;
+    height: unset;
+}
+
+#info-text {
+    display: inline-block;
+    white-space: pre-line;
+    text-wrap: nowrap;
 }
