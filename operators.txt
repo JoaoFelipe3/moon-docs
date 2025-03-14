@@ -670,14 +670,14 @@
 0 ←→   ᴍa⟦ad⟧𝕊 push {right,left} into {left,right} (Medium)
 0 ⥉   ᴍcsw swap right and left (Medium)
 0 ⭠⭢   ᴍa⟦AD⟧𝕊 push {right,left} into {left,right} (Weakest)
-0 ≔≕   ᴍ⟦⁅eqd⁆⁅deq⁆⟧ Assign to {left,right}
+0 ≔≕   ᴍ⟦⁅eqd⁆⁅deq⁆⟧ assign to {left,right}
     `x≔22→+2 ≡ 24 ∧ x≡22`
     `22≕x+2 ≡ 24 ∧ x≡22`
-0 󷸉󷸎   ᴍ⟦⁅eqD⁆⁅Deq⁆⟧ Assign to {left,right}, return previous value
+0 󷸉󷸎   ᴍ⟦⁅eqD⁆⁅Deq⁆⟧ assign to {left,right}, return previous value
     `(␛a≕x)►(x󷸉␛b→+x) ≡ "ab"`
-0 󷸊󷸌   ᴍ⟦⁅eqm⁆⁅meq⁆⟧ Assign to {left,right}, foward value
+0 󷸊󷸌   ᴍ⟦⁅eqm⁆⁅meq⁆⟧ assign to {left,right}, foward value
     `(␛a≕x)►(x󷸊⋅5) ≡ "aaaaa"`
-0 󷸋󷸍   ᴍ⟦⁅eqM⁆⁅Meq⁆⟧ Assign to {left,right}, foward value, return previous value
+0 󷸋󷸍   ᴍ⟦⁅eqM⁆⁅Meq⁆⟧ assign to {left,right}, foward value, return previous value
     `(␛a≕x)►(x󷸋+␛b→+x) ≡ "aab"`
 >¡ℭ ⦑c⦑e6b⦒⦒ 󷰚⬅➡←→⭠⭢⥉
 >¡ℭ ⦑c⦑f0a⦒⦒ 󷰴≔≕󷸉󷸎󷸊󷸌󷸋󷸍
