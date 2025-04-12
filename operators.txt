@@ -89,16 +89,17 @@
 󷰠  𝚡∨􊽨𝚡 ᴍcg𝕊 group-by
     𝗜 
         group into dictionary with keys by truthyness
-        `[1,5,3,2]  󷺹%3ᐸ ≡ {0:[3],1:[1],2:[5,2]}`
+        `[0,"",35,"hello"]  ≡ {✗:[0,""], ✓:[35,"hello"]}`
     𝗜  𝗙
         group into dictionary with keys defined by right arg
+        `[1,5,3,2]  ⬤%3 ≡ {0:[3],1:[1],2:[5,2]}`
     ⁺: return list of values, dropping keys
+    : return list of tuples of keys and values
     􋇐: like ⁺, except groups are only false/true (& are included), so
         `[1,0,5] 􋇐 ≡ [[0],[1,5]]`
-        `[1,0,5] 􋇐 󷺹>1ᐸ ≡ [[1,0],[5]]`
-        `[1,0,5] 􋇐 󷺹<0ᐸ ≡ [[1,0,5],[]]`
-    󷹇 Supports 󰮈
-    󰤱 make it work with ᔨ
+        `[1,0,5] 􋇐 ⬤>1 ≡ [[1,0],[5]]`
+        `[1,0,5] 􋇐 ⬤<0 ≡ [[1,0,5],[]]`
+    󷹇 Supports ᔨ and 󰮈
 󷰠 ſϜ 𝚡∨􊽨𝚡 ᴍ⟦⁅fs⁆⁅FS⁆⟧ {fold,accumulate}
     𝗜 ſ/Ϝ 𝗙
     Left-to-right fold.
@@ -121,10 +122,10 @@
         `[0,1,✗,✓] 󰈲 ≡ [1,✓]`
     𝗜 󰈲 𝗙
         filter left for truthyness under right
-        `[0,1,2,3] 󰈲 󷺹>1ᐸ ≡ [2,3]`
+        `[0,1,2,3] 󰈲 ⬤>1 ≡ [2,3]`
     𝗜 󰈲􋊧 𝗙
         conditional map, apply mod to elm if right true
-        `[0,1,2,3] 󰈲􍈽 󷺹>1ᐸ ≡ [0,1,󷰿,󷱀]`
+        `[0,1,2,3] 󰈲􍈽 ⬤>1 ≡ [0,1,󷰿,󷱀]`
         󷹇 if modifier is not a 𝗙 it becomes a replacement value
     𝗜 󰈲􋊧􌥡 𝑜
         same as previous but right func is equality check on 𝑜
@@ -135,7 +136,8 @@
     𝗜 󰒼 𝗙
         sorts data by right arg
         󷹇 right arg is function of 1 variable
-    󰤱 examples
+    `[5,2,1,0,6,3,4] 󰒼 ≡ 0󷸻6`
+    `[5,2,1,0,6,3,4] 󰒽 ⬤%2 ≡ [3,1,5,4,6,0,2]`
     󷹇 Supports ᔨ and 󰮈
 󷰠 ᗢᙧᙎᙡ 𝚡󷸐􊽨𝚡 ᴍcw⟦ᐦp⟧⟦ᐦt⟧𝕊 window sides {✗ ; ✗,✗ ; ✓,✓ ; ✗,✓ ; ✓} middle
     ᗢ: no sides, no middle
@@ -218,7 +220,7 @@
 󷰢 󷹵󷹴󰁖 𝚡∧􊽨𝚢 ᴍcisn⟦𝕊s⟧ not instance of {right,left}
 󷰢 󱑼󷹅 𝚡∨􊽨𝚡 ᴍcc⟦zZ⟧ zip {left,right} aligned
     𝗜 󱑼 𝗜
-        zips elements at cooresponding indicies
+        zips elements at corresponding indicies
         `[1,2] 󱑼 [1,2,3] ≡ [[1,1],[2,2]]`
     𝗜 󱑼
         arg is iterables of iterables that will be zipped
@@ -551,7 +553,7 @@
     `2²⋅5 ¶ ≡ [2,2,5]`
     `2²⋅5 ¶􋁼 ≡ ℵ⁰({2:2, 5:1})`
     `2²⋅5 ¶􋄴 ≡ ℵ⁰({2:[2,2], 5:[5]})`
-    `3³ ¶􊽥 ≡ 󷰾`  idk what this does lol
+    `3³ ¶􊽥 → ¬`  https://en.wikipedia.org/wiki/Mobius_function
      ¶􀰫 󰤱
 󷰭 ⴵ 𝚡󷺤𝚡 ᴍcsn sign of number / case
     `󷰿ⴵ   ≡ 󷰾`
@@ -595,8 +597,7 @@
     `5! ≡ 120`
     `0! ≡ 1`
     `3!5! ≡ 720`
-    󰤱 micheal
-    󰤱 generalize to gamma function
+    `1.5! ≡ 1.3293403881791317`  gamma function
 󷰯 … 𝚡∧𝚢 ᴍ..𝕊 indicies between
     Same as 󷸹
 󷰯 ⌃󰁌 𝚡∧􊽨𝚢 ᴍc^ exponential
