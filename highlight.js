@@ -1,6 +1,7 @@
 const hoverComments = {
     "󰤱": "todo",
-    "󷹇": "note",
+    "󷹇": "note from ganer",
+    "󰷬": "note from joaozin003",
 };
 
 const signatureComments = {

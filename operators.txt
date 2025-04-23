@@ -144,10 +144,12 @@
     ᙧ: no sides, include middle
     ᙎ: include sides, no middle
     ᙡ: include sides, include middle
+    󰷬 modifier specifies the gap between windows
     󰤱 docs
 󷰠 ᖘ 𝚡∧􋅂𝚡 ᴍcan "candycane", apply to select
     𝗜≕𝕏 ᖘ􊽺 ꬶ
     calls ƒ(𝕏) to get list of indicies
+    󰷬 ƒ can be the list of indices
     ꬶ(ƒ(𝕏)) manipulates the index list
     ᖘ will then place ꬶ(ƒ(𝕏)) into the idxs found via ƒ(𝕏)
     󰤱˜ docs
@@ -433,7 +435,7 @@
     󰤱 docs
 󷰭 󷹎󷹍󷹌 𝚡∨􊽨𝚡 ᴍcs⟦01s⟧ split keeping {0,1,∞} consecutive seperators
     󰤱 docs
-󷰭 ⬓▢⬒ 𝚡󷺤􊽨𝚡 ᴍcr⟦aod⟧ round{ low,, high}
+󷰭 ⬓▢⬒ 𝚡󷺤􊽨𝚡 ᴍcr⟦aod⟧ {floor,round,ceiling}
     `2 ≡ 2.2▢ ≡ 2.2⬓ ≡ 2.9⬓`
     `3 ≡ 2.9▢ ≡ 2.2⬒ ≡ 2.9⬒`
     `2.91▢¹ ≡ 2.9`
@@ -523,7 +525,8 @@
     a✿p ≡ Kronecker symbol (a/p)
     a✿p∈[󷰾,0,1]
     https://en.wikipedia.org/wiki/Kronecker_symbol
-    p∈¶ ⇒ a✿p ≡ p∣a ⭜0⭝ ∃x✣p∣x²-a ⭜1⭝ 󷰾
+    p∈¶ ⇒ a✿p ≡ p∣a ⭜0⭝ ∃x✣p∣x²-a ⭜1⭝󷰾
+    󰷬 p∉¶ ⇒ a✿p ≡ [a✿f ∀ f∈p¶]
     `1✿3 ≡ 1`
     `󷰾✿3 ≡ 󷰾`
     `12✿3 ≡ 0`
