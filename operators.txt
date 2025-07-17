@@ -555,8 +555,8 @@
     `2²⋅5 ¶􋁒 ≡ [2,5]`
     `2²⋅5 ¶ ≡ [2,2,5]`
     `2²⋅5 ¶􋁼 ≡ ℵ⁰({2:2, 5:1})`
-    `2²⋅5 ¶􋄴 ≡ ℵ⁰({2:[2,2], 5:[5]})`
-    `3³ ¶􊽥 → ¬`  https://en.wikipedia.org/wiki/Mobius_function
+    `2²⋅5 ¶􋄴 ≡ ℵ({2:[2,2], 5:[5]})`
+    `3³ ¶􊽥 → ¬` 󰷬 https://en.wikipedia.org/wiki/Mobius_function
      ¶􀰫 󰤱
 󷰭 ⴵ 𝚡󷺤𝚡 ᴍcsn sign of number / case
     `󷰿ⴵ   ≡ 󷰾`
@@ -582,7 +582,8 @@
         `‹x y›⍭ ≡ [␛x,␛y]`
         `‹ y›⍭  ≡ [ᐦ,␛y]`
         `‹y›⍭   ≡ [␛y]`
-    󷹇 this makes use of two alternative space characters unless spcial highlighting is applied this is confusing
+    󷹇 this makes use of two alternative space characters
+    󷹇 unless special highlighting is applied this is confusing
 󷰭 󷹗 𝚡󷺤􊽨𝚡 ᴍasw ugex push
     𝑜 󷹗: Pushes 𝑜 onto ugex stack
     𝑜 󷹗ⁿ: Pushes n copies of 𝑜 onto ugex stack

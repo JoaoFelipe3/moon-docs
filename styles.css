@@ -123,20 +123,8 @@ nav a:hover {
     list-style: none;
 }
 
-.button {
-    float: left;
-    background: none;
-    border: none;
-    padding: 0;
-    height: 3vh;
-    font-size: 3vh;
-    color: gray;
-    cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-    color: white;
+#docs>li:not(:last-child) {
+    margin-bottom: 3vh;
 }
 
 #docs span {
@@ -153,11 +141,12 @@ span.container {
 p.tooltip {
     position: absolute;
     margin: 0;
-    background: #1118;
+    background-color: #1118;
     backdrop-filter: blur(2px);
+    border: 1px solid #eee8;
     transform: translateX(-50%);
     left: 50%;
-    top: 150%;
+    top: 100%;
     border-radius: 1vh;
     z-index: 1;
     opacity: 0;
@@ -165,28 +154,29 @@ p.tooltip {
     pointer-events: none;
 }
 
-p.tooltip::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: -50%;
-    transform: translateX(-50%);
-    width: 1ch;
-    height: 50%;
-    background-color: inherit;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
 span.container:has(span:hover) p.tooltip {
     opacity: 1;
 }
 
-li>pre>span {
-    display: inline-block;
+summary::marker {
+    content: '🮦';
+    color: gray;
+}
+
+details[open]>summary::marker {
+    content: '🮧';
+}
+
+details>summary.no-dropdown::marker {
+    content: '\a0';
+}
+
+summary:hover::marker {
+    color: white;
 }
 
 .rest {
-    padding-left: 2ch;
+    padding-left: 4ch;
 }
 
 .code {
@@ -194,8 +184,7 @@ li>pre>span {
     border-radius: 1vh;
 }
 
-
-/* golf.html*/
+/* golf.html */
 
 #input-container {
     display: inline-block;

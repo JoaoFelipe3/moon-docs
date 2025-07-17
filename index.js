@@ -10,7 +10,7 @@ const notes = {
 function formatFirstLine(glyphs, description) {
     return glyphs
         .map((glyph, index) => glyph + ": " + description.replaceAll(/{(.*?)}/g, (_, c) => c.split(",")[index]))
-        .join("\n ");
+        .join("\n  ");
 }
 
 let docs = await (await fetch("operators.txt")).text();
@@ -43,7 +43,7 @@ for (const item of docs) {
     }
 
     const li = document.createElement("li");
-    const pre = document.createElement("pre");
+    const details = document.createElement("details");
 
     firstLine = firstLine.split(" ").slice(1);
     firstLine = firstLine.join(" ");
@@ -60,31 +60,20 @@ for (const item of docs) {
     let signature = components[1] !== " " ? components[1] : null;
 
     firstLine = highlight(firstLine, {});
-    pre.appendChild(firstLine);
-    li.appendChild(pre);
+    let summary = document.createElement("summary");
+    summary.appendChild(firstLine);
+    details.appendChild(summary);
+    li.appendChild(details);
 
     if (rest || signature) {
         rest = highlight(rest, { displayNotes: true, hasCode: true });
-        rest.className = "rest";
         if (signature) {
             let highlightedSignature = highlight("    Signature: `" + signature + "`\n", { hasCode: true, isSignature: true });
             rest.prepend(highlightedSignature);
         }
-        rest.style.display = "none";
-        pre.appendChild(rest);
-
-        const button = document.createElement("button");
-        button.className = "button";
-        button.innerText = "🮦";
-        button.onclick = () => {
-            rest.style.display = rest.style.display === "none" ? "block" : "none";
-            button.innerText = button.innerText === "🮦" ? "🮧" : "🮦";
-        };
-        li.prepend(button);
+        details.appendChild(rest);
     } else {
-        const indent = document.createElement("span");
-        indent.innerText = " ";
-        pre.prepend(indent);
+        summary.className = "no-dropdown";
     }
     list.appendChild(li);
 }

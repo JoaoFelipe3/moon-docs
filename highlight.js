@@ -29,7 +29,7 @@ function highlightHelper(string, { isCode, isSignature, displayNotes }) {
     };
 
     for (const char of string) {
-        const container = document.createElement("span"); // Styling :sob:
+        const container = document.createElement("span"); // Styling 😭
         if (!/\s/.test(char)) container.className = "container";
         const element = document.createElement("span");
         container.appendChild(element);
