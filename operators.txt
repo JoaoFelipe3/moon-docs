@@ -1,8 +1,8 @@
 󷰜 ⨳ 𝚡∨𝚡 ᴍ## assertion
-    "𝑜 ⨳" ⟶ Asserts 𝑜 is truthy
-    "𝑜₁ ⨳ 𝑜₂" ⟶ Asserts 𝑜₁ is truthy, puts 𝑜₂ in error
-    "⨳˜": Warning
-    "⨳􎒢": Deprecation warning
+    `𝑜 ⨳` ⟶ Asserts 𝑜 is truthy
+    `𝑜₁ ⨳ 𝑜₂` ⟶ Asserts 𝑜₁ is truthy, puts 𝑜₂ in error
+    `⨳˜`: Warning
+    `⨳􎒢`: Deprecation warning
     󷹇 you can make the above errors by setting the following environment variables:
         MOON_WARNING_IS_ERR and MOON_DEPRECATION_IS_ERR
 󷰝 󷺤󷺦 𝚡∧𝚡 ᴍvsx⟦𝕊/⟧ {XOR,NXOR}
@@ -22,6 +22,7 @@
     `✓󷺒✗ →≡ ✓`
     `1∧2 →≡ 2`
     `1∧0 →≡ 0`
+    󰷬 i'm pretty sure ∧ and ⩓ do the same thing?
 󷰟 ≡≠ 𝚡∧𝚡 ᴍ=⟦⁅=𝕊⁆/⟧ {,un}equal
     Works similar to python, taking certain conveniences.
     `2≡2`
@@ -42,7 +43,7 @@
     `4≤5≤6`
     `5≥5≥5`
 󷰟 ∈∋∉∌󰁖 𝚡∧𝚢 ᴍe⟦⁅⟦[]⟧𝕊⁆⁅⟦[]⟧/⁆⟧ {,,not ,not }element of {right,left,right,left}
-    𝑜∈𝗜
+    𝑜 ∈ 𝗜
     `5∈{1} →≡ ✗`
     `2∈{1,2,3} →≡ ✓`
     `␛a ∈ ‹hia› →≡ ✓`
@@ -115,7 +116,7 @@
     In the case of empty iterable and no default value:
         `[] ⨁ ≡ 0`
         `[] ⨀ ≡ 1`
-        `"" ⨁ ≡ ᐦ`
+        `ᐦ  ⨁ ≡ ᐦ`
 󷰠 󰈲󰈳 𝚡∨􊽨𝚡 ᴍcf⟦+-⟧ filter {positive,negative}
     𝗜 󰈲
         filter left for truthyness
@@ -160,8 +161,8 @@
     `2 󱖔􍯏􊽮⁺􍯋 3 ≡ 7`
     `2 󱖔􍯏􊽮 ≡ 4`
     `󱖔􍯏􊽮 2 ≡ 4`
-󷰡 ፓ󷷴 𝚡.􊽨 ᴍdd⟦+-⟧ {,}󰤱
-󷰡 󷷳∫ 𝚡.􊽨 ᴍ⟦⁅dx𝕊⁆⁅int⁆⟧ {,}󰤱
+󷰡 ፓ󷷴 𝚡.􊽨 ᴍdd⟦+-⟧ 󰤱
+󷰡 󷷳∫ 𝚡.􊽨 ᴍ⟦⁅dx𝕊⁆⁅int⁆⟧ 󰤱
 󷰡 ∘ 𝚡∧􊽨𝚡 ᴍO𝕊  call left with right
     "ƒ∘x" ⟶ ƒ(x)
     "ƒ∘³x" ⟶ ƒ(x,x,x)
@@ -305,7 +306,7 @@
     𝗜 ∖ 𝗜 = left󰈳󷺹∈right
     󰤱˜ docs
 󷰭 ☾ 𝚡󷺤􊽨𝚡 ᴍcp𝕊 print
-    "‹hello›☾" ⟶ prints "hello" to stdout
+    `‹hello›☾` ⟶ prints "hello" to stdout
     󰤱 docs
 󷰭 🃌󷸑󷸒 𝚡󷺤􊽨𝚡 ᴍc⟦⁅a𝕊⁆⁅S𝕊⁆⁅SS⁆⟧ {cardinality (length),shape,depth}
     𝗜 🃌: Length of arg
@@ -337,10 +338,10 @@
     Gets ascii/unicode value(s) of string and vise versa
     󰤱 docs
 󷰭 󷹜 𝚡󷺤􊽨𝚡 ᴍCI str to int / change base
-    󷹇 mod is (target_base)+(zero_padding)î
+    󷹇 mod is `target_base+zero_paddingî`
     󰤱 docs
 󷰭 󰛔 𝚡∨􋅂𝚡 ᴍcma string replacement
-    "find 󰛔ᵗᵃʳᵍᵉᵗ replace" or "(find 󰛔 replace)(target)"
+    `find 󰛔ᵗᵃʳᵍᵉᵗ replace` or `(find 󰛔 replace)(target)`
     󰤱 docs
 󷰭 ⛶ 𝚡󷺤􊽨𝚡 ᴍcE𝕊 enlist arguments
     `2⛶ ≡ [2]`
@@ -662,8 +663,8 @@
 0 ⠤⠶   ᴍc⟦dD⟧𝕊 Python {*,**} for {vargs,kargs}
 0 ¿⸘¡   ᴍ⟦⁅?⟦?!⟧⁆⁅!!⁆⟧ Python {if,elif,else}
 0 ⭜⭝   ᴍce⟦nl⟧ ternary {if,else}
-    "x ⭜ y ⭝ z" ⟶ y if x else z
-    "x ⭜ y" ⟶ y if x else □
+    `x ⭜ y ⭝ z` ⟶ y if x else z
+    `x ⭜ y` ⟶ y if x else □
     `✓ ⭜5⭝ 0 ➡≡ 5`
     `✗ ⭜5⭝ 1 ➡≡ 1`
     `✗⭜5 ➡≡ □`

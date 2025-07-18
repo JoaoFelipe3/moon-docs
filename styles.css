@@ -8,8 +8,8 @@
 }
 
 body {
-    background: black;
-    color: white;
+    background: #11111b;
+    color: #cdd6f4;
     margin: 0;
     overflow-x: hidden;
 }
@@ -19,13 +19,13 @@ nav {
     box-sizing: border-box;
     top: 0;
     right: 0;
-    background: black;
+    background: #181825;
     padding: 0 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    border-bottom: 5px solid gray;
+    border-bottom: 5px solid #7f849c;
 }
 
 @media screen and (max-width: 598px) {
@@ -66,7 +66,7 @@ nav h1>img {
 }
 
 nav a {
-    color: white;
+    color: #cdd6f4;
     text-decoration: none;
 }
 
@@ -81,24 +81,30 @@ nav a:hover {
 
 #search {
     box-sizing: border-box;
-    background: black;
-    color: white;
+    background: #1e1e2e;
+    color: #cdd6f4;
     width: 45vw;
     height: 100%;
     font-size: 3vh;
-    border: 2px solid gray;
+    border: 2px solid #7f849c;
     border-radius: 1vh 0 0 1vh;
+    border-right-width: 1px;
     margin: 0;
     padding: 0;
     padding-left: 5px;
 }
 
+#search::placeholder {
+    color: #7f849c;
+}
+
 #submit-search {
     padding: 0;
-    background: black;
-    color: white;
+    background: #1e1e2e;
+    color: #cdd6f4;
     font-size: 4vh;
-    border: 2px solid gray;
+    border: 2px solid #7f849c;
+    border-left-width: 1px;
     border-radius: 0 1vh 1vh 0;
     width: 5vh;
     height: 100%;
@@ -160,7 +166,7 @@ span.container:has(span:hover) p.tooltip {
 
 summary::marker {
     content: '🮦';
-    color: gray;
+    color: #7f849c;
 }
 
 details[open]>summary::marker {
@@ -172,7 +178,7 @@ details>summary.no-dropdown::marker {
 }
 
 summary:hover::marker {
-    color: white;
+    color: #cdd6f4;
 }
 
 .rest {
@@ -180,7 +186,7 @@ summary:hover::marker {
 }
 
 .code {
-    background: #222;
+    background: #1e1e2e;
     border-radius: 1vh;
 }
 
@@ -206,7 +212,7 @@ summary:hover::marker {
     position: absolute;
     top: 0;
     pointer-events: none;
-    background: #111;
+    background: #181825;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -249,19 +255,27 @@ summary:hover::marker {
 }
 
 .delete-button {
-    float: left;
     background: none;
     border: none;
     padding: 0;
     height: 3vh;
     font-size: 3vh;
-    color: gray;
+    color: #7f849c;
     cursor: pointer;
+}
+
+.button {
+    color: #7f849c;
+}
+
+.button:hover,
+.button:focus {
+    color: #cdd6f4;
 }
 
 .delete-button:hover,
 .delete-button:focus {
-    color: red;
+    color: #f38ba8;
 }
 
 #info {
