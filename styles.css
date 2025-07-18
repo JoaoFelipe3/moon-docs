@@ -255,17 +255,13 @@ summary:hover::marker {
 }
 
 .delete-button {
-    background: none;
-    border: none;
-    padding: 0;
-    height: 3vh;
-    font-size: 3vh;
-    color: #7f849c;
+    color: #b988a2;
     cursor: pointer;
 }
 
 .button {
     color: #7f849c;
+    cursor: pointer;
 }
 
 .button:hover,
