@@ -497,7 +497,7 @@
     󰤱˜ docs
 󷰭 󰌷 𝚡∨􊽨𝚡 ᴍcch chain iterables
     󰤱 docs
-    󷹇 if left and right are both integers, we do integer concatination
+    󷹇 if left and right are both integers, we do integer concatenation
        `5 󰌷 23 ≡ 523`
        `5 󰌷 󷱁 ≡ ¯54`
        `󷱁 󰌷 5 ≡ ¯45`
