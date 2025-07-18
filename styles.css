@@ -147,9 +147,9 @@ span.container {
 p.tooltip {
     position: absolute;
     margin: 0;
-    background-color: #1118;
+    background-color: #11111880;
     backdrop-filter: blur(2px);
-    border: 1px solid #eee8;
+    border: 1px solid #cdd6f480;
     transform: translateX(-50%);
     left: 50%;
     top: 100%;
